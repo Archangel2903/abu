@@ -11,8 +11,137 @@
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="header-container container">
+            <div class="header-top row">
+                <div class="col-12">
+                    <div class="header-top__info">
+                        <span class="header-top__info">Будівельна ліцензія: 2013048897 від 30.03.18</span>
+                        <span class="header-top__info">Вул. Набережно-хрещатицька 11, м. Київ, 03800</span>
+                    </div>
+
+                    <ul class="header-top__contact">
+                        <li class="header-top__contact-item">
+                            <a href="#contact" class="header-top__contact-link"><svg><use xlink:href="img/spritemap.svg#sprite-telegram"></use></svg>Telegram</a>
+                        </li>
+                        <li class="header-top__contact-item">
+                            <a href="#contact" class="header-top__contact-link"><svg><use xlink:href="img/spritemap.svg#sprite-viber"></use></svg>Viber</a>
+                        </li>
+                        <li class="header-top__contact-item">
+                            <a href="tel:+380503988898" class="header-top__contact-link">(050) 398 88 98</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-content row">
+                <div class="col-12">
+                    <a href="/" class="header-content__logo logo">
+                        <picture>
+                            <img src="<%= require('./img/logo.svg') %>" title="" alt="">
+                        </picture>
+                    </a>
+
+                    <ul class="header-content__menu">
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Товари</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Асфальтобетонні суміші</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Бетонні суміші</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Залізобетонні вироби</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Кладочні матеріали</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Пиломатеріали матеріали</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Сипучі матеріали</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Фасовані матеріали</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Цемент</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Дроблений бетон</a>
+                                </li>
+                                <li class="header-content__menu-dropdown-item">
+                                    <a href="dropdown-link" class="header-content__menu-dropdown-link">Цегляний бій</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Спецтехніка</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item"><a href="dropdown-link" class="header-content__menu-dropdown-link"></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Будівельні роботи</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item"><a href="dropdown-link" class="header-content__menu-dropdown-link"></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Об’єкти</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item"><a href="dropdown-link" class="header-content__menu-dropdown-link"></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Про нас</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item"><a href="dropdown-link" class="header-content__menu-dropdown-link"></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Акції</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item"><a href="dropdown-link" class="header-content__menu-dropdown-link"></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="header-content__menu-item">
+                            <a href="#menu-link" class="header-content__menu-link">Контакти</a>
+
+                            <ul class="header-content__menu-dropdown">
+                                <li class="header-content__menu-dropdown-item"><a href="dropdown-link" class="header-content__menu-dropdown-link"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="header-content__tools">
+                        <div class="header-content__search">
+                            <label class="header-content__search-label">
+                                <input type="search" class="header-content__search-input" placeholder="Пошук">
+                            </label>
+                        </div>
+
+                        <div class="header-content__languages">
+                            <a href="#lang" class="header-content__languages-switch">UA</a>
+                            <a href="#lang" class="header-content__languages-switch">RU</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
@@ -79,29 +208,84 @@
                 </svg>
             </div>
         </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Range slider</h2>
-
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
-
-                <br>
-
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
-            </div>
-        </div>
     </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer__column">
+                        <a href="/" class="header-content__logo logo">
+                            <picture>
+                                <img src="<%= require('./img/logo.svg') %>" title="" alt="">
+                            </picture>
+                        </a>
+
+                        <div class="footer__social">
+                            <p>Наші соцмережі</p>
+                            <div class="footer__social-container">
+                                <a href="#instagram" class="footer__social-link"><svg><use xlink:href="img/spritemap.svg#sprite-insta"></use></svg></a>
+                                <a href="#facebook" class="footer__social-link"><svg><use xlink:href="img/spritemap.svg#sprite-facebook"></use></svg></a>
+                                <a href="#youtube" class="footer__social-link"><svg><use xlink:href="img/spritemap.svg#sprite-youtube"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__column">
+                        <p class="footer__column-title">Категорії</p>
+
+                        <nav class="footer__nav">
+                            <a href="#f-nav" class="footer__nav-link">Послуги</a>
+                            <a href="#f-nav" class="footer__nav-link">Товари</a>
+                            <a href="#f-nav" class="footer__nav-link">Акції</a>
+                            <a href="#f-nav" class="footer__nav-link">Об’єкти</a>
+                            <a href="#f-nav" class="footer__nav-link">Про нас</a>
+                            <a href="#f-nav" class="footer__nav-link">Сертифікати</a>
+                            <a href="#f-nav" class="footer__nav-link">Ліцензії</a>
+                            <a href="#f-nav" class="footer__nav-link">Контакти</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer__column">
+                        <p class="footer__column-title">Адреса та зв'язок</p>
+
+                        <ul class="footer__contacts">
+                            <li class="footer__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-location"></use></svg>
+                                <span class="footer__contacts-text">Вул. Набережно-хрещатицька 11, м. Київ, 03800</span>
+                            </li>
+
+                            <li class="footer__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-call"></use></svg>
+                                <a href="tel:+380503988898" class="footer__contacts-text">(050) 398 88 98</a>
+                            </li>
+
+                            <li class="footer__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-email"></use></svg>
+                                <a href="mailto:aby5000701@gmail.com" class="footer__contacts-text">aby5000701@gmail.com</a>
+                            </li>
+
+                            <li class="footer__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-telegram"></use></svg>
+                                <span class="footer__contacts-text">Telegram</span>
+                            </li>
+
+                            <li class="footer__contacts-item">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-viber"></use></svg>
+                                <span class="footer__contacts-text">Viber</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="copyright">© Альянс Будівельників України</p>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- FOOTER END -->
