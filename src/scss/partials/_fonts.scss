@@ -1,2 +1,61 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family:'Manrope';
+  src: url('#{$fonts-path}Manrope Bold.eot');
+  src: url('#{$fonts-path}Manrope Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Manrope Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Manrope Bold.woff') format('woff'),
+  url('#{$fonts-path}Manrope Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Manrope Bold.svg#Manrope Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Manrope';
+  src: url('#{$fonts-path}Manrope SemiBold.eot');
+  src: url('#{$fonts-path}Manrope SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Manrope SemiBold.woff2') format('woff2'),
+  url('#{$fonts-path}Manrope SemiBold.woff') format('woff'),
+  url('#{$fonts-path}Manrope SemiBold.ttf') format('truetype'),
+  url('#{$fonts-path}Manrope SemiBold.svg#Manrope SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Manrope';
+  src: url('#{$fonts-path}Manrope Medium.eot');
+  src: url('#{$fonts-path}Manrope Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Manrope Medium.woff2') format('woff2'),
+  url('#{$fonts-path}Manrope Medium.woff') format('woff'),
+  url('#{$fonts-path}Manrope Medium.ttf') format('truetype'),
+  url('#{$fonts-path}Manrope Medium.svg#Manrope Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Manrope';
+  src: url('#{$fonts-path}Manrope Regular.eot');
+  src: url('#{$fonts-path}Manrope Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Manrope Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Manrope Regular.woff') format('woff'),
+  url('#{$fonts-path}Manrope Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Manrope Regular.svg#Manrope Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+  font-display: swap;
+}
