@@ -3,6 +3,10 @@
     display: none;
   }
 
+  .background-lines {
+    height: 0%;
+  }
+
   .icon-load {
     display: block;
   }
@@ -78,7 +82,7 @@
     content: '';
     @extend .section-bg;
     opacity: .25;
-    //background: $main-first-color-custom;
+    background: rgba(0, 0, 0, .5);
     z-index: 0;
   }
 
@@ -90,7 +94,126 @@
   }
 }
 
+.background-lines {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  transform-origin: 0 50%;
+  transition: $transition-base;
+  transition-delay: 0.3s;
+  z-index: -5;
+
+  &__line {
+    flex: 1 1 50%;
+    border-right: 1px solid #F0F0F0;
+    transition: $transition-base;
+
+    &:first-child {
+      border-left: 1px solid #F0F0F0;
+    }
+
+    &:nth-last-child(1), &:nth-last-child(2) {
+      display: none;
+    }
+  }
+}
+
+.sup-title {
+  margin: 0 0 10px;
+  color: $title-color;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .title {
-  font-size: 2.5rem;
-  font-weight: $font-weight-normal;
+  margin: 0 0 20px;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  transition: $transition-base;
+
+  &-sm {
+    box-shadow: none !important;
+  }
+
+  &-lg {
+    min-width: 220px;
+    padding: 20px;
+    box-shadow: none !important;
+  }
+
+  &-primary {
+    color: white;
+    font-size: 16px;
+  }
+
+  &-link {
+    color: $text-color;
+
+    &:hover {
+      color: $primary;
+
+      svg {
+        fill: $primary;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-left: 5px;
+      fill: $text-color;
+      transition: $transition-base;
+    }
+  }
+}
+
+.style-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 0;
+  margin: 0;
+  list-style: disc;
+
+  li {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    &:not(:last-child) {
+      margin: 0 0 30px;
+    }
+
+    &::before {
+      content: '';
+      flex: 0 0 6px;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      margin-right: 20px;
+      background: $primary;
+    }
+  }
 }

@@ -33,7 +33,7 @@ section {
 a {
   outline: none;
   color: $text-color;
-  text-decoration: none;
+  text-decoration: none !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include transition($transition-base);
   &:hover {

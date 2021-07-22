@@ -7,6 +7,7 @@ $main-third-color: blue;
 $title-color: #b8b8db;
 $text-color: #231f20;
 $input-placeholder-color: #b8b8b8;
+$section-bg: #f9f9fc;
 
 // fonts
 $font-family-base: 'Manrope', sans-serif;
@@ -27,6 +28,8 @@ $transition-base: all .3s ease 0s;
 //Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
+
+$primary: $main-first-color;
 
 $grid-breakpoints: (
         xs: 0,

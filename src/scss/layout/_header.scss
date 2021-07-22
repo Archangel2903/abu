@@ -4,10 +4,27 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: relative;
+  position: fixed;
+  inset: auto;
   min-width: 320px;
   width: 100%;
   z-index: 100;
+  background: #ffffff;
+
+  &.scrolling {
+    .header-top-wrap {
+      margin-top: -50px;
+    }
+  }
+}
+
+.header-top-wrap {
+  position: relative;
+  transition: $transition-base;
+}
+
+.header-content-wrap {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header-top {
@@ -17,7 +34,7 @@ header.header {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding: 15px 0;
+  padding: 14px 0;
 
   &__info {
     &-text {

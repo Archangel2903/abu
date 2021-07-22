@@ -5,6 +5,21 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 
+function fixedSize() {
+    let header = $('header.header');
+    let headerHeight = header.height();
+    let headerContent = header.find('.header-content-wrap');
+    let headerContentHeight = headerContent.height();
+    let content = $('main.content');
+
+    if (header.hasClass('scrolling')) {
+        content.css('padding-top', headerContentHeight + 'px');
+    }
+    else {
+        content.css('padding-top', headerHeight + 'px');
+    }
+}
+
 $(window).on('load', function () {
     let b = $('body');
 
@@ -15,9 +30,26 @@ $(window).on('load', function () {
     }
 
     b.removeClass('loaded');
+
+    fixedSize();
 });
 
 $(function () {
+    $(window).on('resize', fixedSize);
+    $(window).on('scroll', function () {
+        let header = $('header.header');
+        let offsetTop = header.offset().top;
+
+        if (offsetTop > 0) {
+            header.addClass('scrolling');
+            fixedSize();
+        }
+        else {
+            header.removeClass('scrolling');
+            setTimeout(fixedSize, 300);
+        }
+    });
+
     $('.header-content__menu-item').each(function (i, e) {
         if ($(e).find('.header-content__menu-dropdown').length) {
             $(e).addClass('dropdown-wrap');
@@ -26,11 +58,58 @@ $(function () {
 
     // Swiper slider
     if ($('.swiper-container').length) {
-        let slider;
-        let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
+        let slider,
+            autoSlider,
+            sliderNavOutside,
+            sliderNavInside;
+
+        let slide = document.querySelectorAll('.main-slider .swiper-slide').length;
+        let slideOutside = document.querySelectorAll('.slider.nav-outside .swiper-slide').length;
+        let slideInside = document.querySelectorAll('.slider.nav-inside .swiper-slide').length;
+
+        autoSlider = new Swiper('.auto-slider', {
+            observer: true,
+            observeParents: true,
+            autoplay: true,
+            loop: true,
+            slidesPerView: 1,
+            allowTouchMove: false,
+            navigation: false,
+            pagination: false,
+            scrollbar: false,
+            dynamicBullets: false
+        });
+
+        if (slideOutside > 4) {
+            sliderNavOutside = new Swiper('.slider.nav-outside', {
+                observer: true,
+                observeParents: true,
+                autoplay: true,
+                loop: true,
+                slidesPerView: 4,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+            });
+        }
+
+        if (slideInside > 4) {
+            sliderNavInside = new Swiper('.slider.nav-inside', {
+                observer: true,
+                observeParents: true,
+                autoplay: true,
+                loop: true,
+                slidesPerView: 4,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+            });
+        }
 
         if (slide > 1) {
-            slider = new Swiper('.swiper-container', {
+            slider = new Swiper('.main-slider', {
                 observer: true,
                 observeParents: true,
                 loop: true,
