@@ -104,14 +104,14 @@ button, input, textarea {
 }
 
 ::-webkit-input-placeholder {
-  font-weight: $font-weight-light;
+  font-weight: 500;
   font-size: 1rem;
   color: $input-placeholder-color;
   transition: $transition-base;
 }
 
 ::-webkit-textarea-placeholder {
-  font-weight: $font-weight-light;
+  font-weight: 500;
   font-size: 1rem;
   color: $input-placeholder-color;
   transition: $transition-base;
@@ -165,13 +165,13 @@ input {
   }
 
   &::-moz-placeholder {
-    font-weight: $font-weight-light;
+    font-weight: 500;
     font-size: 1rem;
     color: $input-placeholder-color;
     transition: $transition-base;
   }
   &::-ms-placeholder {
-    font-weight: $font-weight-light;
+    font-weight: 500;
     font-size: 1rem;
     color: $input-placeholder-color;
     transition: $transition-base;

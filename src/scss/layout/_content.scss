@@ -56,6 +56,20 @@
     padding: 190px 0;
     background: $section-bg;
   }
+  &-our-services {
+    padding: 190px 0;
+  }
+  &-request {
+    padding: 190px 0;
+    background: $section-bg;
+  }
+  &-projects {
+    padding: 190px 0;
+  }
+  &-our-partners {
+    padding: 190px 0;
+    background: $section-bg;
+  }
 }
 
 .main-slider {
@@ -144,6 +158,7 @@
 
     img {
       width: 100%;
+      height: 100%;
     }
 
     &-label {
@@ -236,6 +251,165 @@
       width: 100%;
       height: 83px;
       fill: white;
+    }
+  }
+}
+
+/* SECTION OUR SERVICES */
+.our-services {
+  &__title {
+    margin: 0 0 60px;
+  }
+
+  &__box {
+    padding: 30px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+
+    &-title {
+      margin: 0 0 30px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &-link {
+      display: inline-block;
+      margin: 0 0 30px;
+      font-weight: 700;
+    }
+
+    &__pic {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* SECTION REQUEST */
+.request {
+  &__title {
+
+  }
+
+  &__text {
+    max-width: 400px;
+    line-height: 31px;
+  }
+
+  &__pic {
+    display: block;
+    margin: 0 0 -223px;
+
+    img {
+      width: 100%;
+      max-width: 640px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+
+    .form-group {
+      &:not(:last-child) {
+        margin: 0 0 30px;
+      }
+    }
+  }
+
+  &__input {
+    &-name {
+      display: inline-block;
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 85%;
+    fill: white;
+  }
+}
+
+/* SECTION PROJECTS */
+.projects {
+  &__title {
+
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 31px;
+  }
+
+  &__link {
+
+  }
+
+  &__slider {
+    .swiper-slide {
+      position: relative;
+      border-right: 1px solid #F0F0F0;
+
+      &:hover {
+        .slide-text {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .slide-text {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-base;
+      }
+    }
+  }
+}
+
+/* SECTION OUR PARTNERS */
+.our-partners {
+  &__title {
+    max-width: 440px;
+    margin: 0 0 106px;
+  }
+
+  &__slider {
+    &.slider.nav-inside {
+      .swiper-slide {
+        img {
+          height: 70px;
+        }
+      }
+
+      .swiper-button {
+        &-prev, &-next {
+          background: none;
+        }
+      }
     }
   }
 }

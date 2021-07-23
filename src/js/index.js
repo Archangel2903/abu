@@ -57,35 +57,35 @@ $(function () {
     });
 
     // Swiper slider
-    if ($('.swiper-container').length) {
-        let slider,
-            autoSlider,
-            sliderNavOutside,
-            sliderNavInside;
+    if ($('.auto-slider').length) {
+        let autoSlider,
+            slide = document.querySelectorAll('.auto-slider .swiper-slide').length;
 
-        let slide = document.querySelectorAll('.main-slider .swiper-slide').length;
-        let slideOutside = document.querySelectorAll('.slider.nav-outside .swiper-slide').length;
-        let slideInside = document.querySelectorAll('.slider.nav-inside .swiper-slide').length;
-
-        autoSlider = new Swiper('.auto-slider', {
-            observer: true,
-            observeParents: true,
-            autoplay: true,
-            loop: true,
-            slidesPerView: 1,
-            allowTouchMove: false,
-            navigation: false,
-            pagination: false,
-            scrollbar: false,
-            dynamicBullets: false
-        });
-
-        if (slideOutside > 4) {
-            sliderNavOutside = new Swiper('.slider.nav-outside', {
+        if (slide > 2) {
+            autoSlider = new Swiper('.auto-slider', {
                 observer: true,
                 observeParents: true,
                 autoplay: true,
                 loop: true,
+                slidesPerView: 1,
+                allowTouchMove: false,
+                navigation: false,
+                pagination: false,
+                scrollbar: false,
+                dynamicBullets: false
+            });
+        }
+    }
+
+    if ($('.slider.nav-outside')) {
+        let sliderNavOutside,
+            slide = document.querySelectorAll('.slider.nav-outside .swiper-slide').length;
+
+        if (slide > 4) {
+            sliderNavOutside = new Swiper('.slider.nav-outside', {
+                observer: true,
+                observeParents: true,
+                autoplay: true,
                 slidesPerView: 4,
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -93,13 +93,19 @@ $(function () {
                 },
             });
         }
+    }
 
-        if (slideInside > 4) {
+    if ($('.slider.nav-inside')) {
+        let sliderNavInside,
+            slide = document.querySelectorAll('.slider.nav-inside .swiper-slide').length;
+
+        if (slide > 4) {
             sliderNavInside = new Swiper('.slider.nav-inside', {
                 observer: true,
                 observeParents: true,
                 autoplay: true,
                 loop: true,
+                spaceBetween: 1,
                 slidesPerView: 4,
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -107,6 +113,19 @@ $(function () {
                 },
             });
         }
+
+        if ($('.our-partners__slider.slider.nav-inside')) {
+            console.log(sliderNavInside);
+            sliderNavInside.params.spaceBetween = 77;
+            sliderNavInside.params.slidesOffsetBefore = 100;
+            sliderNavInside.params.slidesOffsetAfter = 100;
+            // sliderNavInside.params.slidesPerView = 'auto';
+        }
+    }
+
+    if ($('.main-slider').length) {
+        let slider;
+        let slide = document.querySelectorAll('.main-slider .swiper-slide').length;
 
         if (slide > 1) {
             slider = new Swiper('.main-slider', {
