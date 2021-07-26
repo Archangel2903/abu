@@ -141,12 +141,34 @@ header.header {
       display: inline-block;
       width: 40px;
       height: 40px;
+      padding: 0;
       border: none;
       border-radius: 5px;
       background: $primary;
 
-      &-line {
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        width: 30px;
+        height: 2px;
+        background: white;
+        transform: translate(-50%, -50%);
+      }
 
+      &::after {
+        top: 75%;
+      }
+
+      &-line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 2px;
+        background: white;
+        transform: translate(-50%, -50%);
       }
     }
 

@@ -64,6 +64,10 @@ $(function () {
         }
     });
 
+    $('.header-content__menu-switch').on('click', function () {
+        $(this).toggleClass('active');
+    });
+
     // Swiper sliders
     let auto_slider = $('.auto-slider'),
         projects_slider = $('.projects__slider'),
