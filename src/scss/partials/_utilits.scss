@@ -281,106 +281,103 @@ input[type="checkbox"]:checked + .checkbox-wrap > .checkbox {
   }
 }
 
-.slider {
-  &.nav-outside {
-    margin-top: 60px;
+.swiper-button {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 30%;
+  max-width: 350px;
+  height: 10px;
 
-    .swiper-slide {
-      img {
-        width: 100%;
+
+  &-prev, &-next {
+    width: 32px;
+    height: 32px;
+    background: none;
+
+    &:hover {
+      svg {
+        fill: $primary;
       }
+    }
+
+    svg {
+      width: 31px;
+      height: 30px;
+      transition: $transition-base;
     }
   }
 
-  &.nav-inside {
-    .swiper-slide {
-      width: auto;
+  &-prev {
+    left: 0;
 
-      img {
-        width: 100%;
-      }
-    }
+    svg {
 
-    .swiper-button {
-      &-prev, &-next {
-        width: 32px;
-        height: 32px;
-        background: none;
-
-        &:hover {
-          svg {
-            fill: $primary;
-          }
-        }
-
-        svg {
-          width: 31px;
-          height: 30px;
-          transition: $transition-base;
-        }
-      }
-
-      &-prev {
-        left: 0;
-
-        svg {
-
-        }
-      }
-
-      &-next {
-        right: 0;
-        transform: rotate(180deg);
-
-        svg {
-
-        }
-      }
     }
   }
 
-  &.swiper-button {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    width: 30%;
-    max-width: 350px;
-    height: 10px;
+  &-next {
+    right: 0;
+    transform: rotate(180deg);
 
-    .swiper-button {
-      &-prev, &-next {
-        width: 32px;
-        height: 32px;
-        background: none;
+    svg {
 
-        &:hover {
-          svg {
-            fill: $primary;
-          }
-        }
+    }
+  }
+}
 
+.nav-outside {
+  margin-top: 60px;
+
+  .swiper-slide {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.nav-inside {
+  .swiper-slide {
+    width: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .swiper-button {
+    &-prev, &-next {
+      width: 32px;
+      height: 32px;
+      background: none;
+
+      &:hover {
         svg {
-          width: 31px;
-          height: 30px;
-          transition: $transition-base;
+          fill: $primary;
         }
       }
 
-      &-prev {
-        left: 0;
-
-        svg {
-
-        }
+      svg {
+        width: 31px;
+        height: 30px;
+        transition: $transition-base;
       }
+    }
 
-      &-next {
-        right: 0;
-        transform: rotate(180deg);
+    &-prev {
+      left: 0;
 
-        svg {
+      svg {
 
-        }
+      }
+    }
+
+    &-next {
+      right: 0;
+      transform: rotate(180deg);
+
+      svg {
+
       }
     }
   }

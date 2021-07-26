@@ -20,6 +20,26 @@
       }
     }
   }
+
+  .header-content {
+    &__logo {
+      order: 0;
+    }
+
+    &__menu {
+      &-wrap {
+        order: 2;
+      }
+    }
+
+    &__tools {
+      flex: 1 1 50%;
+      order: 1;
+      width: auto;
+      margin: 0;
+      padding-right: 40px;
+    }
+  }
 }
 @include media-breakpoint-up(lg) {
   .background-lines {
@@ -33,20 +53,192 @@
       }
     }
   }
+
+  .header-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 14px 0;
+
+    &__info {
+      width: auto;
+      margin: 0;
+      align-items: flex-start;
+
+      &-text {
+        margin: 0;
+        font-size: 13px;
+      }
+    }
+
+    &__contact {
+      width: auto;
+      font-size: 14px;
+
+      &-item {
+        &:not(:last-child) {
+          margin: 0 34px 0 0;
+        }
+      }
+    }
+  }
 }
 @include media-breakpoint-up(xl) {
   .background-lines {
     max-width: 1110px;
   }
-}
 
+  .header-top {
+    &__info {
+      flex-direction: row;
+      align-items: center;
+
+      &-text {
+        &:not(:last-child) {
+          margin: 0 50px 0 0;
+        }
+      }
+    }
+
+    &__contact {
+      width: auto;
+      font-size: 14px;
+
+      &-item {
+        &:not(:last-child) {
+          margin: 0 68px 0 0;
+        }
+      }
+    }
+  }
+}
 @include media-breakpoint-up(xxl) {
   .background-lines {
     max-width: 1280px;
   }
+
+  .header-content {
+    &__menu {
+      position: static;
+      flex-direction: row;
+      background: none;
+
+      &-wrap {
+        order: 1;
+      }
+
+      &-item {
+        position: relative;
+
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+
+        &:hover {
+          .header-content__menu {
+            &-link {
+              &::after {
+                transform: rotate3d(1, 0, 0, 180deg);
+              }
+            }
+            &-dropdown {
+              opacity: 1;
+              visibility: visible;
+              transform: translate(-50%, 0%) rotate3d(0, 0, 0, 90deg);
+              transition: $transition-base;
+              z-index: 1;
+            }
+          }
+        }
+
+        &.dropdown-wrap {
+          .header-content__menu-link {
+            &::after {
+              content: '';
+              display: inline-block;
+              border-width: 5px 3px 0;
+              border-style: solid;
+              border-color: $text-color transparent transparent;
+              margin: 0 0 3px 5px;
+              transition: $transition-base;
+            }
+          }
+        }
+      }
+
+      &-dropdown {
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 50%;
+        min-width: 265px;
+        padding: 30px;
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        background: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        transform: translate(-50%, -25%) rotate3d(1, 0, 0, 90deg);
+        transition: $transition-base;
+        transition-delay: .3s;
+        will-change: transform;
+        z-index: -1;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -8px;
+          left: 50%;
+          border-width: 0 8px 8px;
+          border-style: solid;
+          border-color: transparent transparent $main-first-color;
+          transform: translate(-50%, 0);
+          transition: $transition-base;
+        }
+
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+
+        &-link {
+          font-weight: 600;
+        }
+      }
+
+      &-switch {
+        display: none;
+      }
+    }
+
+    &__tools {
+      order: 2;
+      flex: 0 0 auto;
+      padding: 0;
+    }
+
+    &__search {
+      flex: 0 0 auto;
+      max-width: 180px;
+      margin-right: 40px;
+
+      &-label {
+        width: auto;
+      }
+    }
+
+    &__languages {
+      flex: 0 0 auto;
+    }
+  }
 }
 
 // max-width
+@include media-breakpoint-down(xxl) {}
+@include media-breakpoint-down(xl) {}
 @include media-breakpoint-down(lg) {}
 @include media-breakpoint-down(md) {}
 @include media-breakpoint-down(sm) {}

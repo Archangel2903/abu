@@ -10,12 +10,6 @@ header.header {
   width: 100%;
   z-index: 100;
   background: #ffffff;
-
-  &.scrolling {
-    .header-top-wrap {
-      margin-top: -50px;
-    }
-  }
 }
 
 .header-top-wrap {
@@ -23,26 +17,25 @@ header.header {
   transition: $transition-base;
 }
 
-.header-content-wrap {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
 .header-top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  padding: 14px 0;
+  display: none;
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin: 0 0 10px;
+
     &-text {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
 
       &:not(:last-child) {
-        margin-right: 50px;
+        margin: 0 0 5px;
       }
     }
   }
@@ -54,17 +47,18 @@ header.header {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    width: 100%;
     padding: 0;
     margin: 0;
 
     &-item {
       &:not(:last-child) {
-        margin-right: 68px;
+        margin-right: 10px;
       }
     }
 
     &-link {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 600;
 
       &:hover {
@@ -94,6 +88,10 @@ header.header {
   }
 }
 
+.header-content-wrap {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 .logo {
   &__pic {
     img {}
@@ -118,95 +116,42 @@ header.header {
   }
 
   &__menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
+    background: $title-color;
+    z-index: 1;
 
-    &-item {
+    &.active {
+
+    }
+
+    &-switch {
       position: relative;
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background: $primary;
 
-      &:hover {
-        .header-content__menu {
-          &-link {
-            &::after {
-              transform: rotate3d(1, 0, 0, 180deg);
-            }
-          }
-          &-dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(-50%, 0%) rotate3d(0, 0, 0, 90deg);
-            transition: $transition-base;
-            z-index: 1;
-          }
-        }
-      }
+      &-line {
 
-      &.dropdown-wrap {
-        .header-content__menu-link {
-          &::after {
-            content: '';
-            display: inline-block;
-            border-width: 5px 3px 0;
-            border-style: solid;
-            border-color: $text-color transparent transparent;
-            margin: 0 0 3px 5px;
-            transition: $transition-base;
-          }
-        }
       }
     }
 
     &-link {
       font-weight: 600;
-    }
-
-    &-dropdown {
-      position: absolute;
-      top: calc(100% + 20px);
-      left: 50%;
-      min-width: 265px;
-      padding: 30px;
-      margin: 0;
-      opacity: 0;
-      visibility: hidden;
-      background: white;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-      transform: translate(-50%, -25%) rotate3d(1, 0, 0, 90deg);
-      transition: $transition-base;
-      transition-delay: .3s;
-      will-change: transform;
-      z-index: -1;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        border-width: 0 8px 8px;
-        border-style: solid;
-        border-color: transparent transparent $main-first-color;
-        transform: translate(-50%, 0);
-        transition: $transition-base;
-      }
-
-      &-item {
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-      }
-
-      &-link {
-        font-weight: 600;
-      }
     }
   }
 
@@ -217,14 +162,26 @@ header.header {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    width: 100%;
+    margin: 20px 0 0;
   }
 
   &__search {
-    max-width: 180px;
-    margin-right: 40px;
+    flex: 1 1 auto;
 
     &-label {
+      position: relative;
+      width: 90%;
       margin: 0;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+      }
     }
 
     &-input {
@@ -237,6 +194,7 @@ header.header {
   }
 
   &__languages {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
