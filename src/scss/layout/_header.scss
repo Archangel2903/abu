@@ -94,7 +94,8 @@ header.header {
 
 .logo {
   &__pic {
-    img {}
+    img {
+    }
   }
 }
 
@@ -111,13 +112,14 @@ header.header {
     margin-right: 40px;
 
     .logo__pic {
-      img {}
+      img {
+      }
     }
   }
 
   &__menu {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 100%;
     display: flex;
     flex-direction: column;
@@ -127,13 +129,15 @@ header.header {
     align-content: center;
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 60px 30px 30px;
     margin: 0;
-    background: $title-color;
+    background: white;
+    transition: $transition-base;
     z-index: 1;
 
     &.active {
-
+      top: 0;
+      left: 0;
     }
 
     &-switch {
@@ -144,7 +148,8 @@ header.header {
       padding: 0;
       border: none;
       border-radius: 5px;
-      background: $primary;
+      background: none;
+      z-index: 2;
 
       &::before, &::after {
         content: '';
@@ -153,8 +158,10 @@ header.header {
         left: 50%;
         width: 30px;
         height: 2px;
-        background: white;
+        border-radius: 5px;
+        background: $text-color;
         transform: translate(-50%, -50%);
+        transition: $transition-base;
       }
 
       &::after {
@@ -167,13 +174,81 @@ header.header {
         left: 50%;
         width: 30px;
         height: 2px;
-        background: white;
+        border-radius: 5px;
+        background: $text-color;
         transform: translate(-50%, -50%);
+        transition: $transition-base;
+      }
+
+      &.active {
+
+        &::before {
+          top: 20%;
+          width: 20px;
+          transform-origin: 0 0;
+          transform: translate(-65%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          top: 55%;
+          width: 20px;
+          transform-origin: 0 0;
+          transform: translate(5%, -50%) rotate(45deg);
+        }
+
+        .header-content__menu-switch-line {
+          width: 40px;
+          transform: translate(-50%, 50%) rotate(-45deg);
+        }
+      }
+    }
+
+    &-item {
+      margin: 0 0 20px;
+
+      &.active {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: $primary;
+        }
+      }
+
+      &.dropdown-wrap {
+        .header-content__menu-link {
+          &::after {
+            content: '';
+            display: inline-block;
+            border-width: 5px 3px 0;
+            border-style: solid;
+            border-color: $text-color transparent transparent;
+            margin: 0 0 3px 5px;
+            transform: rotate(-90deg);
+            transition: $transition-base;
+          }
+        }
       }
     }
 
     &-link {
       font-weight: 600;
+    }
+
+    &-dropdown {
+      display: none;
+      min-width: 265px;
+      padding: 30px;
+      margin: 0;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+      &-item {}
+
+      &-link {}
     }
   }
 
@@ -232,6 +307,7 @@ header.header {
 
       &:not(:first-child) {
         margin: 0 13px;
+
         &::before {
           content: '';
           position: absolute;

@@ -5,27 +5,33 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 
+const mqlMax = {
+    xxl: matchMedia('(max-width: 1365px)'),
+    xl: matchMedia('(max-width: 1199px)'),
+    lg: matchMedia('(max-width: 991px)'),
+    md: matchMedia('(max-width: 767px)'),
+    sm: matchMedia('(max-width: 575px)'),
+}
+
 function fixedSize() {
-    let header = $('header.header');
-    let headerHeight = header.height();
-    let headerTop = header.find('.header-top-wrap');
-    let headerTopHeight = headerTop.height();
-    let headerContent = header.find('.header-content-wrap');
-    let headerContentHeight = headerContent.height();
-    let content = $('main.content');
+    let header = $('header.header'),
+        headerHeight = header.height(),
+        headerTop = header.find('.header-top-wrap'),
+        headerTopHeight = headerTop.height(),
+        headerContent = header.find('.header-content-wrap'),
+        headerContentHeight = headerContent.height(),
+        content = $('main.content');
 
     if (header.hasClass('scrolling')) {
         headerTop.css('margin-top', '-' + headerTopHeight + 'px');
         content.css('padding-top', headerContentHeight + 'px');
-    } else {
-
+    }
+    else {
         headerTop.css('margin-top', '0');
         setTimeout(function () {
             headerHeight = header.height();
             content.css('padding-top', headerHeight + 'px');
         }, 300);
-
-        console.log(headerHeight);
     }
 }
 
@@ -66,6 +72,7 @@ $(function () {
 
     $('.header-content__menu-switch').on('click', function () {
         $(this).toggleClass('active');
+        $(this).next().toggleClass('active');
     });
 
     // Swiper sliders
@@ -107,6 +114,17 @@ $(function () {
                 navigation: {
                     nextEl: projects_slider.prev().find('.swiper-button-next')[0],
                     prevEl: projects_slider.prev().find('.swiper-button-prev')[0],
+                },
+                breakpoints: {
+                    991: {
+                        slidesPerView: 3
+                    },
+                    767: {
+                        slidesPerView: 2
+                    },
+                    575: {
+                        slidesPerView: 1
+                    }
                 }
             });
         }
@@ -126,6 +144,18 @@ $(function () {
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    1199: {
+                        spaceBetween: 40,
+                        slidesPerView: 3
+                    },
+                    767: {
+                        slidesPerView: 2
+                    },
+                    575: {
+                        slidesPerView: 1
+                    }
                 }
             });
         }
@@ -146,6 +176,12 @@ $(function () {
                 navigation: {
                     nextEl: reviews_slider.prev().find('.swiper-button-next')[0],
                     prevEl: reviews_slider.prev().find('.swiper-button-prev')[0],
+                },
+                breakpoints: {
+                    991: {
+                        autoHeight: false,
+                        slidesPerView: 1
+                    }
                 }
             });
         }

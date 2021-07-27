@@ -7,6 +7,44 @@
   .background-lines {
     max-width: 510px;
   }
+
+  .sup-title {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 54px;
+  }
+
+  .home-content {
+    &__title {
+      font-size: 60px;
+    }
+
+    &__bottom {
+      .btn-link {
+        margin: 0 0 0 125px;
+      }
+    }
+  }
+
+  .our-clients {
+    &__box {
+      &-title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .request {
+    &__pic {
+      margin: 0 0 -223px;
+    }
+
+    &__form {
+      padding: 30px;
+    }
+  }
 }
 @include media-breakpoint-up(md) {
   .background-lines {
@@ -17,6 +55,14 @@
 
       &:nth-last-child(2) {
         display: block;
+      }
+    }
+  }
+
+  .style-list {
+    li {
+      &::before {
+        margin-right: 20px;
       }
     }
   }
@@ -38,6 +84,37 @@
       width: auto;
       margin: 0;
       padding-right: 40px;
+    }
+  }
+
+  .home-content {
+    &__title {
+      font-size: 81px;
+    }
+  }
+
+  .about-company {
+    &__slide {
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .our-clients {
+    &__box {
+      padding: 30px;
+    }
+  }
+
+  .seo-block {
+    padding: 66px;
+  }
+
+  .footer-content {
+    &__nav {
+      width: 50%;
     }
   }
 }
@@ -89,10 +166,102 @@
       }
     }
   }
+
+  .section {
+    &-about-company {
+      padding: 190px 0;
+
+      &__bg {
+        position: absolute;
+        top: 75px;
+        right: 6%;
+        left: auto;
+        transform: none;
+
+        img {
+          width: 1082px;
+          height: 724px;
+        }
+      }
+    }
+    &-our-clients {
+      padding: 190px 0;
+      background: $section-bg;
+    }
+    &-our-services {
+      padding: 190px 0;
+    }
+    &-request {
+      padding: 190px 0;
+      background: $section-bg;
+    }
+    &-projects {
+      padding: 190px 0;
+    }
+    &-our-partners {
+      padding: 190px 0;
+      background: $section-bg;
+    }
+    &-reviews {
+      padding: 190px 0;
+    }
+    &-seo {
+      padding: 0 0 190px;
+    }
+  }
+
+  .home-content {
+    padding: 200px 0 325px;
+  }
+
+  .our-services {
+    &__box {
+      padding: 30px;
+
+      &-title {
+        margin: 0 0 30px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  footer.footer {
+    padding: 85px 0 40px;
+
+    .logo {
+      margin-bottom: 80px;
+    }
+  }
+
+  .footer-content {
+    flex-direction: row;
+
+    &__column {
+      align-items: stretch;
+      align-content: stretch;
+    }
+
+    &__social {
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+
+    &__nav {
+      align-items: stretch;
+      width: auto;
+      height: auto;
+    }
+  }
 }
 @include media-breakpoint-up(xl) {
   .background-lines {
     max-width: 1110px;
+  }
+
+  .btn {
+    &-primary {
+      font-size: 16px;
+    }
   }
 
   .header-top {
@@ -118,6 +287,12 @@
       }
     }
   }
+
+  .our-partners {
+    &__slider {
+      padding: 0 100px;
+    }
+  }
 }
 @include media-breakpoint-up(xxl) {
   .background-lines {
@@ -128,6 +303,7 @@
     &__menu {
       position: static;
       flex-direction: row;
+      padding: 0;
       background: none;
 
       &-wrap {
@@ -136,6 +312,7 @@
 
       &-item {
         position: relative;
+        margin: 0;
 
         &:not(:last-child) {
           margin-right: 25px;
@@ -161,13 +338,7 @@
         &.dropdown-wrap {
           .header-content__menu-link {
             &::after {
-              content: '';
-              display: inline-block;
-              border-width: 5px 3px 0;
-              border-style: solid;
-              border-color: $text-color transparent transparent;
-              margin: 0 0 3px 5px;
-              transition: $transition-base;
+              transform: none;
             }
           }
         }
@@ -177,6 +348,7 @@
         position: absolute;
         top: calc(100% + 20px);
         left: 50%;
+        display: block;
         min-width: 265px;
         padding: 30px;
         margin: 0;
