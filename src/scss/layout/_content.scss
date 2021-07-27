@@ -520,4 +520,59 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+  border-top: 1px solid #f0f0f0;
+
+  &__card {
+    flex: 0 1 25%;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 25%;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    border-top: none;
+    border-left: none;
+    background: white;
+
+    &:nth-child(4n + 1) {
+      border-left: 1px solid #f0f0f0;
+    }
+
+    &:hover {
+      .category__card-name {
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+
+    &-pic {
+      margin: 0 0 30px;
+
+      img {
+
+      }
+    }
+
+    &-name {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      font-weight: 700;
+
+      svg {
+        flex: 1 0 auto;
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        transition: $transition-base;
+      }
+    }
+  }
 }
