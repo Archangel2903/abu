@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Category Products</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.889578ab02edbc2e8a99.min.css" rel="stylesheet"></head>
+    <title>Catalog Services</title>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -53,7 +53,7 @@
                         <div class="header-content">
                             <a href="/" class="header-content__logo logo">
                                 <picture class="logo__pic">
-                                    <img src="img/logo.svg" title="" alt="">
+                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
                                 </picture>
                             </a>
 
@@ -237,94 +237,229 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Головна</a></li>
-                        <li class="breadcrumb-item">Товари</li>
+                        <li class="breadcrumb-item"><a href="#">Послуги</a></li>
+                        <li class="breadcrumb-item"><a href="#">Оренда спецтехніки</a></li>
+                        <li class="breadcrumb-item">Екскаватори</li>
                     </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="section section-category">
+        <section class="section section-catalog">
             <div class="container">
-                <div class="category">
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category01.png" title="" alt="">
-                        </picture>
+                <div class="catalog-wrapper">
+                    <div class="catalog-sort">
+                        <a href="#" class="catalog-sort__price-link" download>Завантажити прайс <svg><use xlink:href="img/spritemap.svg#sprite-download"></use></svg></a>
 
-                        <span class="category__card-name">Асфальтобетонні суміші <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                        <label class="catalog-sort__select-wrap">
+                            <select name="product-sort" id="product_sort" class="catalog-sort__select select-style">
+                                <option value="sort1">Сортування за замовчуванням</option>
+                                <option value="sort2">От дорогих к дешёвым</option>
+                                <option value="sort3">От дешёвых к дорогим</option>
+                            </select>
+                        </label>
+                    </div>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category02.png" title="" alt="">
-                        </picture>
+                    <div class="catalog-sidebar">
+                        <p class="catalog-sidebar__title">Залізобетонні вироби</p>
 
-                        <span class="category__card-name">Бетонні суміші <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                        <ul class="catalog-sidebar__list">
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Житлове будівництво</a>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category03.png" title="" alt="">
-                        </picture>
+                                <svg class="catalog-sidebar__dropdown-trigger">
+                                    <use xlink:href="img/spritemap.svg#sprite-dropdown"></use>
+                                </svg>
 
-                        <span class="category__card-name">Залізобетонні вироби <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <ul class="catalog-sidebar__dropdown">
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">Плити перекриття</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Фундаменти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">Інженерні мережі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Перемички і пояси</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">Прогони</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Сходові системи</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Товари для доріг і тротуарів</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Елементи огороджень</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Палі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Вентиляційні блоки</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ліфтові шахти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балконні плити</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балки</a></li>
+                                </ul>
+                            </li>
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Інженерні комунікації</a>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category04.png" title="" alt="">
-                        </picture>
+                                <svg class="catalog-sidebar__dropdown-trigger">
+                                    <use xlink:href="img/spritemap.svg#sprite-dropdown"></use>
+                                </svg>
 
-                        <span class="category__card-name">Кладочні матеріали <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <ul class="catalog-sidebar__dropdown">
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">Плити перекриття</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Фундаменти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">Інженерні мережі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Перемички і пояси</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">Прогони</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Сходові системи</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Товари для доріг і тротуарів</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Елементи огороджень</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Палі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Вентиляційні блоки</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ліфтові шахти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балконні плити</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балки</a></li>
+                                </ul>
+                            </li>
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Елементи благоустрою доріг</a>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category05.png" title="" alt="">
-                        </picture>
+                                <svg class="catalog-sidebar__dropdown-trigger">
+                                    <use xlink:href="img/spritemap.svg#sprite-dropdown"></use>
+                                </svg>
 
-                        <span class="category__card-name">Пиломатеріали матеріали <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <ul class="catalog-sidebar__dropdown">
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">Плити перекриття</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Фундаменти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">Інженерні мережі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Перемички і пояси</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">Прогони</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Сходові системи</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Товари для доріг і тротуарів</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Елементи огороджень</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Палі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Вентиляційні блоки</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ліфтові шахти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балконні плити</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балки</a></li>
+                                </ul>
+                            </li>
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Теплопостачання</a>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category06.png" title="" alt="">
-                        </picture>
+                                <svg class="catalog-sidebar__dropdown-trigger">
+                                    <use xlink:href="img/spritemap.svg#sprite-dropdown"></use>
+                                </svg>
 
-                        <span class="category__card-name">Сипучі матеріали <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <ul class="catalog-sidebar__dropdown">
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">Плити перекриття</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Фундаменти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">Інженерні мережі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Перемички і пояси</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">Прогони</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Сходові системи</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Товари для доріг і тротуарів</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Елементи огороджень</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Палі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Вентиляційні блоки</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ліфтові шахти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балконні плити</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балки</a></li>
+                                </ul>
+                            </li>
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Підстанційні та енергетичні ЗБВ</a>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category07.png" title="" alt="">
-                        </picture>
+                                <svg class="catalog-sidebar__dropdown-trigger">
+                                    <use xlink:href="img/spritemap.svg#sprite-dropdown"></use>
+                                </svg>
 
-                        <span class="category__card-name">Фасовані матеріали <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <ul class="catalog-sidebar__dropdown">
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">Плити перекриття</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Фундаменти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">Інженерні мережі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Перемички і пояси</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">Прогони</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Сходові системи</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Товари для доріг і тротуарів</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Елементи огороджень</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Палі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Вентиляційні блоки</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ліфтові шахти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балконні плити</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балки</a></li>
+                                </ul>
+                            </li>
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Промислове будівництво</a>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category08.png" title="" alt="">
-                        </picture>
+                                <svg class="catalog-sidebar__dropdown-trigger">
+                                    <use xlink:href="img/spritemap.svg#sprite-dropdown"></use>
+                                </svg>
 
-                        <span class="category__card-name">Цемент <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <ul class="catalog-sidebar__dropdown">
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">Плити перекриття</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Фундаменти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">Інженерні мережі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Перемички і пояси</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">Прогони</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Сходові системи</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Товари для доріг і тротуарів</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Елементи огороджень</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Палі</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Вентиляційні блоки</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ліфтові шахти</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балконні плити</a></li>
+                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Балки</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category09.png" title="" alt="">
-                        </picture>
+                    <div class="catalog">
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">ПК 72-12-8</p>
+                            <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
 
-                        <span class="category__card-name">Дроблений бетон <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">ПК 72-12-8</p>
+                            <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category10.png" title="" alt="">
-                        </picture>
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">ПК 72-12-8</p>
+                            <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
 
-                        <span class="category__card-name">Цегляний бій <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">ПК 72-12-8</p>
+                            <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">ПК 72-12-8</p>
+                            <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">ПК 72-12-8</p>
+                            <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -370,7 +505,7 @@
                         <div class="footer-content__column">
                             <a href="/" class="logo">
                                 <picture class="logo__pic">
-                                    <img src="img/logo.svg" title="" alt="">
+                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
                                 </picture>
                             </a>
 
@@ -474,8 +609,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.889578ab02edbc2e8a99.min.js"></script></body>
+</body>
 </html>

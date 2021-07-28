@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
+import 'select2';
 
 const mqlMax = {
     xxl: matchMedia('(max-width: 1365px)'),
@@ -216,6 +217,27 @@ $(function () {
             }
         }
     */
+
+    if ($('.catalog-sidebar__dropdown-trigger')) {
+        $('.catalog-sidebar__dropdown-trigger').on('click', function () {
+            if ($(this).hasClass('rotate')) {
+                $(this).toggleClass('rotate');
+                $(this).next('.catalog-sidebar__dropdown').stop().slideToggle(300);
+            }
+            else {
+                $('.catalog-sidebar__dropdown-trigger').removeClass('rotate');
+                $('.catalog-sidebar__dropdown').stop().slideUp(300);
+                $(this).toggleClass('rotate');
+                $(this).next('.catalog-sidebar__dropdown').stop().slideToggle(300);
+            }
+        });
+    }
+
+    if ($('.select-style').length) {
+        $('.select-style').select2({
+            minimumResultsForSearch: -1,
+        });
+    }
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
