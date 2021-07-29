@@ -450,10 +450,11 @@ input[type="checkbox"]:checked + .checkbox-wrap > .checkbox {
           &__arrow {
             top: 0;
             right: 0;
+            width: 40px;
             height: 100%;
 
             b {
-              width: 40px;
+              width: 12px;
               height: 12px;
               padding: 0;
               border: none;

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Category Services</title>
+    <title>Catalog Services</title>
 <link rel="shortcut icon" href="favicon.ico"><link href="style.def46354013e131d552e.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
@@ -237,86 +237,278 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Головна</a></li>
-                        <li class="breadcrumb-item">Будівельні роботи</li>
+                        <li class="breadcrumb-item"><a href="#">Товари</a></li>
+                        <li class="breadcrumb-item">Бетонні суміши</li>
                     </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="section section-category">
+        <section class="section section-catalog">
             <div class="container">
-                <div class="category">
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category11.png" title="" alt="">
-                        </picture>
+                <div class="catalog-wrapper">
+                    <div class="catalog-sort">
+                        <a href="#" class="catalog-sort__price-link" download>Завантажити прайс <svg><use xlink:href="img/spritemap.svg#sprite-download"></use></svg></a>
 
-                        <span class="category__card-name">Асфальтобетонні роботи <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                        <label class="catalog-sort__select-wrap">
+                            <select name="product-sort" id="product_sort" class="catalog-sort__select select-style">
+                                <option value="sort1">Сортування за замовчуванням</option>
+                                <option value="sort2">От дорогих к дешёвым</option>
+                                <option value="sort3">От дешёвых к дорогим</option>
+                            </select>
+                        </label>
+                    </div>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category12.png" title="" alt="">
-                        </picture>
+                    <div class="catalog-sidebar">
+                        <p class="catalog-sidebar__title">Бетонні суміши</p>
 
-                        <span class="category__card-name">Благоустрій території <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                        <ul class="catalog-sidebar__list">
+                            <li class="catalog-sidebar__list-item this-page">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Будівельні суміші</a>
+                            </li>
+                            <li class="catalog-sidebar__list-item">
+                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Товарні бетони</a>
+                            </li>
+                        </ul>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category13.png" title="" alt="">
-                        </picture>
+                        <div class="catalog-sidebar__filter">
+                            <div class="catalog-sidebar__filter-box">
+                                <p class="catalog-sidebar__filter-title">Клас
+                                    <span class="catalog-sidebar__filter-tooltip">
+                                    <svg><use xlink:href="img/spritemap.svg#sprite-tooltip"></use></svg>
+                                    <span class="catalog-sidebar__filter-tooltip-content">Здатність розтікатися під власною вагою та заповнювати форми</span>
+                                </span>
+                                </p>
 
-                        <span class="category__card-name">Снігоприбиральні роботи <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                <form action="mailto:test@test.test" method="post" class="catalog-sidebar__filter-form">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B7.5</span>
+                                    </label>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category14.png" title="" alt="">
-                        </picture>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B12.5</span>
+                                    </label>
 
-                        <span class="category__card-name">Вивіз буд сміття <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B45</span>
+                                    </label>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category15.png" title="" alt="">
-                        </picture>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B50</span>
+                                    </label>
 
-                        <span class="category__card-name">Розробка і риття котлованів <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B55</span>
+                                    </label>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category16.png" title="" alt="">
-                        </picture>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B60</span>
+                                    </label>
 
-                        <span class="category__card-name">Демонтаж споруд <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B15</span>
+                                    </label>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category17.png" title="" alt="">
-                        </picture>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B20</span>
+                                    </label>
 
-                        <span class="category__card-name">Монолітні роботи <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B25</span>
+                                    </label>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category18.png" title="" alt="">
-                        </picture>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B30</span>
+                                    </label>
 
-                        <span class="category__card-name">Швидкомонтовані будівлі <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B35</span>
+                                    </label>
 
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category19.png" title="" alt="">
-                        </picture>
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">B40</span>
+                                    </label>
+                                </form>
+                            </div>
 
-                        <span class="category__card-name">Залізничні перевезення <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                            <div class="catalog-sidebar__filter-box">
+                                <p class="catalog-sidebar__filter-title">Рухомість
+                                    <span class="catalog-sidebar__filter-tooltip">
+                                    <svg><use xlink:href="img/spritemap.svg#sprite-tooltip"></use></svg>
+                                    <span class="catalog-sidebar__filter-tooltip-content">Здатність розтікатися під власною вагою та заповнювати форми</span>
+                                </span>
+                                </p>
+
+                                <form action="mailto:test@test.test" method="post" class="catalog-sidebar__filter-form">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">P1</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">P2</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">P3</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">P4</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">P5</span>
+                                    </label>
+                                </form>
+                            </div>
+
+                            <div class="catalog-sidebar__filter-box">
+                                <p class="catalog-sidebar__filter-title">Морозостійкість
+                                    <span class="catalog-sidebar__filter-tooltip">
+                                    <svg><use xlink:href="img/spritemap.svg#sprite-tooltip"></use></svg>
+                                    <span class="catalog-sidebar__filter-tooltip-content">Здатність розтікатися під власною вагою та заповнювати форми</span>
+                                </span>
+                                </p>
+
+                                <form action="mailto:test@test.test" method="post" class="catalog-sidebar__filter-form">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">F50</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">F100</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">F200</span>
+                                    </label>
+                                </form>
+                            </div>
+
+                            <div class="catalog-sidebar__filter-box">
+                                <p class="catalog-sidebar__filter-title">Водонепроникність
+                                    <span class="catalog-sidebar__filter-tooltip">
+                                    <svg><use xlink:href="img/spritemap.svg#sprite-tooltip"></use></svg>
+                                    <span class="catalog-sidebar__filter-tooltip-content">Здатність розтікатися під власною вагою та заповнювати форми</span>
+                                </span>
+                                </p>
+
+                                <form action="mailto:test@test.test" method="post" class="catalog-sidebar__filter-form">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">W6</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">W8</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">W10</span>
+                                    </label>
+                                </form>
+                            </div>
+
+                            <div class="catalog-sidebar__filter-box">
+                                <p class="catalog-sidebar__filter-title">Умови
+                                    <span class="catalog-sidebar__filter-tooltip">
+                                    <svg><use xlink:href="img/spritemap.svg#sprite-tooltip"></use></svg>
+                                    <span class="catalog-sidebar__filter-tooltip-content">Здатність розтікатися під власною вагою та заповнювати форми</span>
+                                </span>
+                                </p>
+
+                                <form action="mailto:test@test.test" method="post" class="catalog-sidebar__filter-form">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">Літній</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="catalog-sidebar__filter-check">Зимовий</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog">
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="img/default.svg" data-src="img/product-02.png" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">Бетон БСГ В 7,5 Р1 F50</p>
+                            <p class="catalog__card-price"><b>₴ 1220,</b><sup>40</sup> / м. куб</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="img/default.svg" data-src="img/product-02.png" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">Бетон БСГ В 7,5 Р1 F50</p>
+                            <p class="catalog__card-price"><b>₴ 1220,</b><sup>40</sup> / м. куб</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="img/default.svg" data-src="img/product-02.png" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">Бетон БСГ В 7,5 Р1 F50</p>
+                            <p class="catalog__card-price"><b>₴ 1220,</b><sup>40</sup> / м. куб</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="img/default.svg" data-src="img/product-02.png" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">Бетон БСГ В 7,5 Р1 F50</p>
+                            <p class="catalog__card-price"><b>₴ 1220,</b><sup>40</sup> / м. куб</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="img/default.svg" data-src="img/product-02.png" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">Бетон БСГ В 7,5 Р1 F50</p>
+                            <p class="catalog__card-price"><b>₴ 1220,</b><sup>40</sup> / м. куб</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+
+                        <div class="catalog__card">
+                            <picture class="catalog__card-pic">
+                                <img src="img/default.svg" data-src="img/product-02.png" title="" alt="">
+                            </picture>
+                            <p class="catalog__card-text">Бетон БСГ В 7,5 Р1 F50</p>
+                            <p class="catalog__card-price"><b>₴ 1220,</b><sup>40</sup> / м. куб</p>
+                            <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

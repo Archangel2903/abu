@@ -6,14 +6,6 @@ import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
 
-const mqlMax = {
-    xxl: matchMedia('(max-width: 1365px)'),
-    xl: matchMedia('(max-width: 1199px)'),
-    lg: matchMedia('(max-width: 991px)'),
-    md: matchMedia('(max-width: 767px)'),
-    sm: matchMedia('(max-width: 575px)'),
-}
-
 function fixedSize() {
     let header = $('header.header'),
         headerHeight = header.height(),
