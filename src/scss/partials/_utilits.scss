@@ -394,6 +394,7 @@ input[type="checkbox"]:checked + .checkbox-wrap > .checkbox {
   &-item {
     color: #c2c2c2;
     font-size: 13px;
+    font-weight: 600;
 
     & + .breadcrumb-item {
       padding-left: 2px;

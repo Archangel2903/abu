@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Category Services</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.25755ca92e09229222b4.min.css" rel="stylesheet"></head>
+    <title>Objects</title>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -53,7 +53,7 @@
                         <div class="header-content">
                             <a href="/" class="header-content__logo logo">
                                 <picture class="logo__pic">
-                                    <img src="img/logo.svg" title="" alt="">
+                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
                                 </picture>
                             </a>
 
@@ -143,7 +143,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="header-content__menu-item active">
+                                    <li class="header-content__menu-item">
                                         <a href="#menu-link" class="header-content__menu-link">Будівельні роботи</a>
 
                                         <ul class="header-content__menu-dropdown">
@@ -232,119 +232,84 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-breadcrumb">
+        <section class="section section-head">
+            <div class="section-bg">
+                <picture>
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/home-bg04.png') %>" class="section-bg__img" title="" alt="">
+                </picture>
+            </div>
+
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Головна</a></li>
-                        <li class="breadcrumb-item">Будівельні роботи</li>
+                        <li class="breadcrumb-item">Об’єкти</li>
                     </ol>
                 </nav>
-            </div>
-        </section>
 
-        <section class="section section-category">
-            <div class="container">
-                <div class="category">
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category11.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Асфальтобетонні роботи <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category12.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Благоустрій території <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category13.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Снігоприбиральні роботи <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category14.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Вивіз буд сміття <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category15.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Розробка і риття котлованів <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category16.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Демонтаж споруд <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category17.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Монолітні роботи <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category18.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Швидкомонтовані будівлі <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
-
-                    <a href="#category" class="category__card">
-                        <picture class="category__card-pic">
-                            <img src="img/default.svg" data-src="img/category19.png" title="" alt="">
-                        </picture>
-
-                        <span class="category__card-name">Залізничні перевезення <svg><use xlink:href="img/spritemap.svg#sprite-btn-arrow"></use></svg></span>
-                    </a>
+                <div class="head-content">
+                    <p class="head-content__name">Об’єкти</p>
+                    <h1 class="head-content__title">Зустрічайте наші неймовірні проекти</h1>
                 </div>
             </div>
         </section>
 
-        <section class="section section-seo">
-            <div class="container">
+        <section class="section section-objects">
+            <div class="achievements container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="seo-block">
-                            <p class="seo-block__title">Альянс Будівельників України</p>
+                        <div class="projects__slider-nav swiper-button">
+                            <div class="swiper-button-prev">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-arrow_slider"></use>
+                                </svg>
+                            </div>
 
-                            <p class="seo-block__text">надає транспортні послуги вантажоперевезень та оренди будівельної техніки провідних європейських машинобудівників з
-                                бездоганною репутацією. Пропонуємо Вам здачу спецтехніки в оренду на різний період часу, як від одного дня, так і на сезон. Весь цей час
-                                діє повне сервісне обслуговування.
-                            </p>
+                            <div class="swiper-button-next">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-arrow_slider"></use>
+                                </svg>
+                            </div>
+                        </div>
 
-                            <p class="seo-block__text seo-block__text_lg">На тривалу оренду ми пропонуємо цілу систему знижок!</p>
+                        <div class="projects__slider slider nav-outside swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#project" class="slide-text">ТРЦ "Ocean Plaza"</a>
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/self-project01.png') %>" alt="example" title="example">
+                                    </picture>
+                                </div>
 
-                            <p class="seo-block__text">Наші фахівці підберуть швидке і максимально вигідне для вас рішення згідно переліку робіт, які необхідно
-                                виконати.</p>
+                                <div class="swiper-slide">
+                                    <a href="#project" class="slide-text">ЖК Respublika</a>
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/self-project02.png') %>" alt="example" title="example">
+                                    </picture>
+                                </div>
 
-                            <ul>
-                                <li>самоскиди для перевезення сипучих будматеріалів або вивезення сміття, снігу і т.д .;</li>
-                                <li>техніка для роботи із землею і демонтажу різних будівель;</li>
-                                <li>доставка, перекачування, заливання бетонну та сумішей;</li>
-                                <li>панелевози для доставки залізобетонних панелей;</li>
-                                <li>маніпулятори та автокрани для задач з навантаження, розвантаження, монтажу і інших будівельних потреб</li>
-                            </ul>
+                                <div class="swiper-slide">
+                                    <a href="#project" class="slide-text">ТРЦ "Ocean Plaza"</a>
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/self-project03.png') %>" alt="example" title="example">
+                                    </picture>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#project" class="slide-text">ЖК Respublika</a>
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/self-project04.png') %>" alt="example" title="example">
+                                    </picture>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#project" class="slide-text">ТРЦ "Ocean Plaza"</a>
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example"
+                                             title="example">
+                                    </picture>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -362,7 +327,7 @@
                         <div class="footer-content__column">
                             <a href="/" class="logo">
                                 <picture class="logo__pic">
-                                    <img src="img/logo.svg" title="" alt="">
+                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
                                 </picture>
                             </a>
 
@@ -466,8 +431,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.25755ca92e09229222b4.min.js"></script></body>
+</body>
 </html>

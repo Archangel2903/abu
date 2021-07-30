@@ -5,6 +5,7 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
+import 'lightgallery';
 
 function fixedSize() {
     let header = $('header.header'),
@@ -124,34 +125,31 @@ $(function () {
     }
 
     if (partners_slider.length) {
-        let slider,
-            slide = document.querySelectorAll('.our-partners__slider .swiper-slide').length;
+        let slider;
 
-        if (slide > 4) {
-            slider = new Swiper('.our-partners__slider', {
-                observer: true,
-                observeParents: true,
-                autoplay: true,
-                spaceBetween: 77,
-                slidesPerView: 4,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+        slider = new Swiper('.our-partners__slider', {
+            observer: true,
+            observeParents: true,
+            autoplay: true,
+            spaceBetween: 77,
+            slidesPerView: 4,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1199: {
+                    spaceBetween: 40,
+                    slidesPerView: 3
                 },
-                breakpoints: {
-                    1199: {
-                        spaceBetween: 40,
-                        slidesPerView: 3
-                    },
-                    767: {
-                        slidesPerView: 2
-                    },
-                    575: {
-                        slidesPerView: 1
-                    }
+                767: {
+                    slidesPerView: 2
+                },
+                575: {
+                    slidesPerView: 1
                 }
-            });
-        }
+            }
+        });
     }
 
     if (reviews_slider.length) {
@@ -227,6 +225,7 @@ $(function () {
 
     if ($('.select-style').length) {
         $('.select-style').select2({
+            dropdownParent: $('.dropdown-wrapper'),
             minimumResultsForSearch: -1,
         });
     }
