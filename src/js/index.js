@@ -5,6 +5,7 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
+import L from 'leaflet';
 import 'lightgallery';
 
 function fixedSize() {
@@ -274,3 +275,4 @@ $(function () {
         });
     }
 });
+

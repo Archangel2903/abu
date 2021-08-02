@@ -23,7 +23,8 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader',
+                    // outputPath: 'js',
                 }
             },
             {
@@ -31,7 +32,7 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
+                    'sass-loader',
                 ]
             },
             {
@@ -56,12 +57,12 @@ module.exports = {
                 }
             },
             {
-                test: /\.(mp4)/,
+                test: /\.(mp4|mow|wmv|flv)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPatch: 'video'
+                        outputPatch: 'media',
                     }
                 }
             }
@@ -76,8 +77,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "style.[hash].min.css",
-            chunkFilename: '[id].[hash].css'
+            filename: 'style.[hash].min.css',
+            outputPath: 'css',
+            chunkFilename: '[id].[hash].css',
         }),
         new OptimizeCSSAssetsPlugin({
             assetNameRegExp: /\.optimize\.css$/g,
@@ -85,22 +87,22 @@ module.exports = {
             cssProcessorPluginOptions: {
                 preset: ['default', { discardComments: { removeAll: true } }],
             },
-            canPrint: true
+            canPrint: true,
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-            filename: "index.html",
-            favicon: "./src/favicon.ico"
+            filename: 'index.html',
+            favicon: './src/favicon.ico',
         }),
         ...pages.map((page) => new HtmlWebpackPlugin({
             template: './src/' + page,
             filename: page,
             favicon: './src/favicon.ico',
-            inject: true
+            inject: true,
         })),
         new SVGSpritemapPlugin("src/img/icons/*.svg", {
             output: {
-                filename: "img/spritemap.svg"
+                filename: 'img/spritemap.svg',
             }
         }),
     ]

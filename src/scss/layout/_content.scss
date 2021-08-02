@@ -1385,7 +1385,23 @@
     margin: 0;
 
     &-item {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      max-width: 300px;
+      margin: 0;
       font-weight: 500;
+
+      &:not(:last-child) {
+        margin: 0 0 40px;
+      }
+    }
+
+    &-text {
+      flex: 0 1 100px;
     }
 
     &-value {

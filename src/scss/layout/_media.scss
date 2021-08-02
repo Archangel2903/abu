@@ -373,7 +373,6 @@
               opacity: 1;
               visibility: visible;
               transform: translate(-50%, 0%) rotate3d(0, 0, 0, 90deg);
-              transition: $transition-base;
               z-index: 1;
             }
           }
@@ -402,6 +401,7 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         transform: translate(-50%, -25%) rotate3d(1, 0, 0, 90deg);
         transition: $transition-base;
+        transition-delay: 0.3s;
         will-change: transform;
         z-index: -1;
 
