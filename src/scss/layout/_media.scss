@@ -16,6 +16,18 @@
     font-size: 54px;
   }
 
+  .section-head {
+    &.section-head_sm {
+      .head-content {
+        padding: 168px 0;
+
+        &__title {
+          font-size: 54px;
+        }
+      }
+    }
+  }
+
   .home-content {
     &__title {
       font-size: 60px;
@@ -230,6 +242,12 @@
     &-objects {
       padding: 190px 0;
     }
+    &-blog {
+
+    }
+    &-article {
+
+    }
   }
 
   .home-content {
@@ -384,7 +402,6 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         transform: translate(-50%, -25%) rotate3d(1, 0, 0, 90deg);
         transition: $transition-base;
-        transition-delay: .3s;
         will-change: transform;
         z-index: -1;
 

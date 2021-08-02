@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Certificate</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.1ad5b95e0f20248f08ae.min.css" rel="stylesheet"></head>
+    <title>Service card</title>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -53,7 +53,7 @@
                         <div class="header-content">
                             <a href="/" class="header-content__logo logo">
                                 <picture class="logo__pic">
-                                    <img src="img/logo.svg" title="" alt="">
+                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
                                 </picture>
                             </a>
 
@@ -143,7 +143,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="header-content__menu-item active">
+                                    <li class="header-content__menu-item">
                                         <a href="#menu-link" class="header-content__menu-link">Будівельні роботи</a>
 
                                         <ul class="header-content__menu-dropdown">
@@ -211,9 +211,7 @@
                                 <div class="header-content__search">
                                     <label class="header-content__search-label">
                                         <input type="search" class="header-content__search-input" placeholder="Пошук">
-                                        <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-search"></use>
-                                        </svg>
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-search"></use></svg>
                                     </label>
                                 </div>
 
@@ -237,117 +235,151 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Головна</a></li>
-                        <li class="breadcrumb-item"><a href="#">Сертифікати</a></li>
-                        <li class="breadcrumb-item"><a href="#">Оренда спецтехніки</a></li>
-                        <li class="breadcrumb-item">Екскаватори</li>
+                        <li class="breadcrumb-item"><a href="#">Товари</a></li>
+                        <li class="breadcrumb-item"><a href="#">Залізобетонні вироби</a></li>
+                        <li class="breadcrumb-item"><a href="#">Житлове будівництво</a></li>
+                        <li class="breadcrumb-item"><a href="#">Плити перекриття</a></li>
+                        <li class="breadcrumb-item">ПК 72-12-8</li>
                     </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="section section-catalog">
+        <section class="section section-product-card">
             <div class="container">
-                <div class="catalog-wrapper">
-                    <div class="catalog-sidebar">
-                        <ul class="catalog-sidebar__list">
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link1" class="catalog-sidebar__list-link">Асфальт</a>
-                            </li>
-                            <li class="catalog-sidebar__list-item this-page">
-                                <a href="#sidebar-link2" class="catalog-sidebar__list-link">Бетон</a>
-                            </li>
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link3" class="catalog-sidebar__list-link">Бітумна емульсія</a>
+                <div class="row">
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-card-view">
+                                <picture class="product-card-view__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-card04.png') %>" alt="" title="">
+                                </picture>
 
-                                <svg class="catalog-sidebar__dropdown-trigger"><use xlink:href="img/spritemap.svg#sprite-dropdown"></use></svg>
+                                <form action="" class="product-card__form">
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label>
+                                                <span class="request__input-name">Телефон</span>
+                                                <input type="tel" class="form-control" placeholder="Ваш номер телефона">
+                                            </label>
+                                        </div>
 
-                                <ul class="catalog-sidebar__dropdown">
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">АБ Столичний</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Бетон комплекс</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">БК Стоун</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Благобуд</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">33В</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Золотий мандарин</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ковальська</a></li>
-                                </ul>
-                            </li>
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link4" class="catalog-sidebar__list-link">Борти</a>
+                                        <div class="col">
+                                            <label>
+                                                <span class="request__input-name">Iм'я</span>
+                                                <input type="text" class="form-control" placeholder="Введіть ваше ім'я">
+                                            </label>
+                                        </div>
+                                    </div>
 
-                                <svg class="catalog-sidebar__dropdown-trigger"><use xlink:href="img/spritemap.svg#sprite-dropdown"></use></svg>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label>
+                                                <span class="request__input-name">Email</span>
+                                                <input type="email" class="form-control" placeholder="Ваша електронна пошта">
+                                            </label>
+                                        </div>
 
-                                <ul class="catalog-sidebar__dropdown">
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">АБ Столичний</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Бетон комплекс</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">БК Стоун</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Благобуд</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">33В</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Золотий мандарин</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ковальська</a></li>
-                                </ul>
-                            </li>
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link5" class="catalog-sidebar__list-link">Грунт</a>
-                            </li>
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link6" class="catalog-sidebar__list-link">Тактильна плитка</a>
-                            </li>
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link7" class="catalog-sidebar__list-link">Цемент</a>
-                            </li>
-                            <li class="catalog-sidebar__list-item">
-                                <a href="#sidebar-link8" class="catalog-sidebar__list-link">Щебінь</a>
+                                        <div class="col">
+                                            <label>
+                                                <span class="request__input-name">Тема</span>
+                                                <input type="text" class="form-control" placeholder="Тема заявки">
+                                            </label>
+                                        </div>
+                                    </div>
 
-                                <svg class="catalog-sidebar__dropdown-trigger"><use xlink:href="img/spritemap.svg#sprite-dropdown"></use></svg>
+                                    <div class="form-group mb-4">
+                                        <label class="col">
+                                            <input type="checkbox" class="request__input request__input_check">
+                                            <span class="checkbox-wrap">
+                                    <span class="checkbox"></span>
+                                    <span class="checkbox-text">Я не робот</span>
+                                </span>
+                                        </label>
+                                    </div>
 
-                                <ul class="catalog-sidebar__dropdown">
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#01" class="catalog-sidebar__dropdown-link">АБ Столичний</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#02" class="catalog-sidebar__dropdown-link">Бетон комплекс</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#03" class="catalog-sidebar__dropdown-link">БК Стоун</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#04" class="catalog-sidebar__dropdown-link">Благобуд</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#05" class="catalog-sidebar__dropdown-link">33В</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#06" class="catalog-sidebar__dropdown-link">Золотий мандарин</a></li>
-                                    <li class="catalog-sidebar__dropdown-item"><a href="#07" class="catalog-sidebar__dropdown-link">Ковальська</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                                    <div class="form-group m-0">
+                                        <div class="col">
+                                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Замовити дзвінок">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="product-card-details">
+                                <div class="product-card-details__description">
+                                    <p class="product-card-details__description-title">Плити перекриття</p>
+
+                                    <p class="product-card-details__description-name">ПК 72-12-8</p>
+
+                                    <p class="product-card-details__description-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+
+                                    <p class="product-card-details__description-text">Плиты перекрытия обладают различными преимуществами</p>
+
+                                    <p class="product-card-details__description-text">Универсальность применения. Плиты перекрытия используются в строительстве многоквартирных, многоэтажных, индивидуальных жилых домов, многих производственных и общественных зданий, различных ангаров и складских помещений. Высокая пожарная безопасность и прочность, высокий уровень звукоизоляции.</p>
+                                </div>
+
+                                <div class="product-card-details__characteristic">
+                                    <p class="product-card-details__characteristic-title">Характеристики</p>
+
+                                    <ul class="product-card-details__characteristic-list">
+                                        <li>Довжина (L), мм: <span class="product-card-details__characteristic-value">1480</span></li>
+                                        <li>Висота (H), мм: <span class="product-card-details__characteristic-value">220</span></li>
+                                        <li>Ширина (B), мм: <span class="product-card-details__characteristic-value">1190</span></li>
+                                        <li>Маса, кг: <span class="product-card-details__characteristic-value">680</span></li>
+                                        <li>Клас бетону: <span class="product-card-details__characteristic-value">В15</span></li>
+                                        <li>Aртикул товара: <span class="product-card-details__characteristic-value">10000155</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="catalog">
-                        <div class="catalog__card">
-                            <picture class="catalog__card-pic">
-                                <img src="img/default.svg" data-src="img/certificate.png" title="" alt="">
-                            </picture>
-                        </div>
+        <section class="section section-other-products">
+            <div class="container">
+                <p class="title">Інші пропозиції</p>
 
-                        <div class="catalog__card">
-                            <picture class="catalog__card-pic">
-                                <img src="img/default.svg" data-src="img/certificate.png" title="" alt="">
-                            </picture>
-                        </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="catalog other-products">
+                            <div class="catalog__card">
+                                <picture class="catalog__card-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                                </picture>
+                                <p class="catalog__card-text">Сходові системи</p>
+                                <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                                <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                            </div>
 
-                        <div class="catalog__card">
-                            <picture class="catalog__card-pic">
-                                <img src="img/default.svg" data-src="img/certificate.png" title="" alt="">
-                            </picture>
-                        </div>
+                            <div class="catalog__card">
+                                <picture class="catalog__card-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                                </picture>
+                                <p class="catalog__card-text">Фундаментні блоки</p>
+                                <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                                <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                            </div>
 
-                        <div class="catalog__card">
-                            <picture class="catalog__card-pic">
-                                <img src="img/default.svg" data-src="img/certificate.png" title="" alt="">
-                            </picture>
-                        </div>
+                            <div class="catalog__card">
+                                <picture class="catalog__card-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                                </picture>
+                                <p class="catalog__card-text">Кільця</p>
+                                <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                                <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                            </div>
 
-                        <div class="catalog__card">
-                            <picture class="catalog__card-pic">
-                                <img src="img/default.svg" data-src="img/certificate.png" title="" alt="">
-                            </picture>
-                        </div>
-
-                        <div class="catalog__card">
-                            <picture class="catalog__card-pic">
-                                <img src="img/default.svg" data-src="img/certificate.png" title="" alt="">
-                            </picture>
+                            <div class="catalog__card">
+                                <picture class="catalog__card-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-01.png') %>" title="" alt="">
+                                </picture>
+                                <p class="catalog__card-text">Перемички</p>
+                                <p class="catalog__card-price"><b>₴ 1601,</b><sup>28</sup> / шт</p>
+                                <a href="" class="catalog__card-link btn btn-primary btn-block">Переглянути</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -365,7 +397,7 @@
                         <div class="footer-content__column">
                             <a href="/" class="logo">
                                 <picture class="logo__pic">
-                                    <img src="img/logo.svg" title="" alt="">
+                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
                                 </picture>
                             </a>
 
@@ -469,8 +501,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.1ad5b95e0f20248f08ae.min.js"></script></body>
+</body>
 </html>

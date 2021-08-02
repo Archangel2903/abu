@@ -73,7 +73,8 @@ $(function () {
     let auto_slider = $('.auto-slider'),
         projects_slider = $('.projects__slider'),
         partners_slider = $('.our-partners__slider'),
-        reviews_slider = $('.reviews__slider');
+        reviews_slider = $('.reviews__slider'),
+        card_slider = $('.product-card-view__slider');
 
     if (auto_slider.length) {
         let autoSlider,
@@ -176,6 +177,30 @@ $(function () {
                 }
             });
         }
+    }
+
+    if (card_slider.length) {
+        let slider,
+            sliderThumb;
+
+        sliderThumb = new Swiper('.product-card-view__slider-thumb', {
+            observer: true,
+            observeParents: true,
+            spaceBetween: 1,
+            slidesPerView: 2,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+
+        slider = new Swiper('.product-card-view__slider', {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            thumbs: {
+                swiper: sliderThumb,
+            }
+        });
     }
 
     /*
