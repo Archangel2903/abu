@@ -238,7 +238,25 @@
     &-achievements {
       padding: 190px 0;
     }
-
+    &-build-achievements {
+      padding: 190px 0;
+    }
+    &-build-benefits {
+      padding: 190px 0;
+    }
+    &-gratitude {
+      padding: 190px 0;
+    }
+    &-price {
+      padding: 190px 0;
+    }
+    &-faq {
+      padding: 190px 0;
+      background: $section-bg;
+    }
+    &-video {
+      padding: 190px 0;
+    }
     &-objects {
       padding: 190px 0;
     }
@@ -362,6 +380,14 @@
           margin-right: 25px;
         }
 
+        &.dropdown-wrap {
+          .header-content__menu-link {
+            &::after {
+              transform: rotate(0);
+            }
+          }
+        }
+
         &:hover {
           .header-content__menu {
             &-link {
@@ -374,14 +400,6 @@
               visibility: visible;
               transform: translate(-50%, 0%) rotate3d(0, 0, 0, 90deg);
               z-index: 1;
-            }
-          }
-        }
-
-        &.dropdown-wrap {
-          .header-content__menu-link {
-            &::after {
-              transform: none;
             }
           }
         }

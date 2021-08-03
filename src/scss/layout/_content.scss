@@ -13,6 +13,9 @@
 
 /* SECTIONS */
 .section {
+  position: relative;
+  z-index: 1;
+
   &-home {
     &__video {
       position: absolute;
@@ -125,11 +128,33 @@
   &-achievements {
     padding: 100px 0;
   }
-
+  &-build-achievements {
+    padding: 100px 0;
+  }
+  &-build-benefits {
+    padding: 100px 0;
+    background: $section-bg;
+  }
+  &-gratitude {
+    padding: 100px 0;
+    background: $section-bg;
+  }
+  &-price {
+    padding: 100px 0;
+  }
+  &-faq {
+    padding: 100px 0;
+  }
+  &-video {
+    padding: 100px 0;
+  }
   &-objects {
     padding: 100px 0;
   }
   &-contacts {}
+  &-map {
+    padding: 60px 0 190px;
+  }
   &-blog {
     padding: 90px 0 190px;
   }
@@ -1366,6 +1391,115 @@
   }
 }
 
+/* SECTION BUILD SERVICE */
+.build-achievements {
+  &__text {
+    max-width: 550px;
+    line-height: 31px;
+  }
+
+  &__pic {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* SECTION BUILD BENEFITS */
+.build-benefits {
+  &__title {
+    margin: 0 0 60px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+
+    &-number {
+      flex: 0 0 auto;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 80px;
+      height: 80px;
+      margin-right: 30px;
+      background: #fdecdd;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+
+    &-text {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+  }
+}
+
+/* SECTION GRATITUDE */
+.gratitude {
+  &__slider {
+    .swiper-slide {
+      max-width: 290px;
+      padding: 30px;
+      border: 1px solid #f0f0f0;
+      border-radius: 5px;
+      margin-right: 40px;
+    }
+  }
+}
+
+/* SECTION PRICE */
+.price {
+  &__title {
+    margin: 0 0 60px;
+  }
+
+  &__list {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    margin: 0;
+    background: white;
+
+    &-item {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      font-weight: 600;
+      line-height: 22px;
+
+      &:not(:last-child) {
+        margin: 0 0 20px;
+      }
+    }
+
+    &-value {
+      font-weight: 500;
+    }
+  }
+}
+
+/* SECTION FAQ */
+.faq {
+
+}
+
 /* SECTION CONTACTS */
 .contacts {
   &__title {
@@ -1410,6 +1544,10 @@
   }
 }
 
+#map {
+  height: 480px;
+}
+
 /* SECTION BLOG */
 .blog {
   &__title {
@@ -1437,6 +1575,10 @@
 
       img {
         width: 100%;
+        max-width: 260px;
+        height: 270px;
+        object-fit: cover;
+        object-position: center;
       }
     }
 
@@ -1497,10 +1639,6 @@
     }
   }
 }
-
-
-
-
 
 /* 404 */
 .page-404 {

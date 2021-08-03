@@ -6,7 +6,9 @@ import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
 import L from 'leaflet';
-import 'lightgallery';
+// import 'lightgallery';
+// import 'lightgallery/src/js/lightgallery';
+import '../img/map-point.svg';
 
 function fixedSize() {
     let header = $('header.header'),
@@ -29,6 +31,16 @@ function fixedSize() {
         }, 300);
     }
 }
+function toTop() {
+    let buttonToTop = $('#to_top');
+    buttonToTop.on('click', function () {
+        $('html, body').stop().animate({
+            scrollTop: 0,
+        }, 750);
+
+        return false;
+    });
+}
 
 $(window).on('load', function () {
     let b = $('body');
@@ -41,14 +53,41 @@ $(window).on('load', function () {
 
     b.removeClass('loaded');
 
+    /* leaflet */
+    if ($('#map').length) {
+        delete L.Icon.Default.prototype._getIconUrl;
+        L.Icon.Default.mergeOptions({
+            iconRetinaUrl: '../img/map-point.svg',
+            iconUrl: 'img/map-point.svg',
+            iconSize: 36,
+            iconAnchor: [18, 48],
+            shadowUrl: null,
+        });
+        const map = L.map('map');
+        const mapCenter = [50.46251377176145, 30.525405151883337];
+        const baseMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        });
+        const markerMap = L.marker(mapCenter).addTo(map).bindPopup('АБУ - Вул. Набережно-хрещатицька 11, м. Київ, 03800');
+        baseMap.addTo(map);
+
+        if (map) {
+            map.setView(mapCenter, 14).scrollWheelZoom.disable();
+        }
+    }
+
     fixedSize();
 });
 
 $(function () {
     $(window).on('resize', fixedSize);
-    $(window).on('scroll', function () {
+    $(window).on('scroll', function (e) {
+
         let header = $('header.header');
         let offsetTop = header.offset().top;
+
+        toTop();
 
         if (offsetTop > 0) {
             header.addClass('scrolling');
@@ -75,7 +114,8 @@ $(function () {
         projects_slider = $('.projects__slider'),
         partners_slider = $('.our-partners__slider'),
         reviews_slider = $('.reviews__slider'),
-        card_slider = $('.product-card-view__slider');
+        card_slider = $('.product-card-view__slider'),
+        gratitude_slider = $('.gratitude__slider');
 
     if (auto_slider.length) {
         let autoSlider,
@@ -204,6 +244,35 @@ $(function () {
         });
     }
 
+    if (gratitude_slider.length) {
+        let slider,
+            slide = document.querySelectorAll('.gratitude__slider .swiper-slide').length;
+
+        if (slide > 4) {
+            slider = new Swiper('.gratitude__slider', {
+                observer: true,
+                observeParents: true,
+                spaceBetween: 40,
+                slidesPerView: 4,
+                navigation: {
+                    nextEl: gratitude_slider.prev().find('.swiper-button-next')[0],
+                    prevEl: gratitude_slider.prev().find('.swiper-button-prev')[0],
+                },
+                breakpoints: {
+                    991: {
+                        slidesPerView: 3
+                    },
+                    767: {
+                        slidesPerView: 2
+                    },
+                    575: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+        }
+    }
+
     /*
         if ($('.main-slider').length) {
             let slider;
@@ -275,4 +344,3 @@ $(function () {
         });
     }
 });
-

@@ -66,10 +66,6 @@
   }
 }
 
-.section {
-  position: relative;
-}
-
 .section-bg {
   position: absolute;
   top: 0;
@@ -81,8 +77,8 @@
   &:after {
     content: '';
     @extend .section-bg;
-    opacity: .25;
-    background: rgba(0, 0, 0, .5);
+    opacity: .35;
+    background: #000000;;
     z-index: 0;
   }
 
