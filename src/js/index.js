@@ -5,9 +5,8 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
-import L from 'leaflet';
 // import 'lightgallery';
-// import 'lightgallery/src/js/lightgallery';
+import L from 'leaflet';
 import '../img/map-point.svg';
 
 function fixedSize() {
@@ -54,7 +53,7 @@ $(window).on('load', function () {
     b.removeClass('loaded');
 
     /* leaflet */
-    if ($('#map').length) {
+    /*if ($('#map').length) {
         delete L.Icon.Default.prototype._getIconUrl;
         L.Icon.Default.mergeOptions({
             iconRetinaUrl: '../img/map-point.svg',
@@ -75,7 +74,7 @@ $(window).on('load', function () {
         if (map) {
             map.setView(mapCenter, 14).scrollWheelZoom.disable();
         }
-    }
+    }*/
 
     fixedSize();
 });
@@ -272,7 +271,6 @@ $(function () {
             });
         }
     }
-
     /*
         if ($('.main-slider').length) {
             let slider;
@@ -303,6 +301,7 @@ $(function () {
         }
     */
 
+    // dropdown sidebar
     if ($('.catalog-sidebar__dropdown-trigger')) {
         $('.catalog-sidebar__dropdown-trigger').on('click', function () {
             if ($(this).hasClass('rotate')) {
@@ -318,10 +317,34 @@ $(function () {
         });
     }
 
+    // select2
     if ($('.select-style').length) {
         $('.select-style').select2({
             dropdownParent: $('.dropdown-wrapper'),
             minimumResultsForSearch: -1,
+        });
+    }
+
+    // FAQ box
+    let faqBox = $('.faq-box');
+
+    if (faqBox.length) {
+        let boxTrigger = $('.faq-box__trigger');
+
+        boxTrigger.on('click', function () {
+            let thisBox = $(this).closest('.faq-box'),
+                boxBody = thisBox.find('.faq-box__body');
+
+            if (thisBox.hasClass('active')) {
+                thisBox.toggleClass('active');
+                boxBody.stop().slideToggle(300);
+            }
+            else {
+                faqBox.removeClass('active');
+                faqBox.find('.faq-box__body').stop().slideUp(300);
+                thisBox.addClass('active');
+                boxBody.stop().slideDown(300);
+            }
         });
     }
 
