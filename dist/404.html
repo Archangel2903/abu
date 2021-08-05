@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-</head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.9d7be9931c1bf1d39792.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -53,7 +53,7 @@
                         <div class="header-content">
                             <a href="/" class="header-content__logo logo">
                                 <picture class="logo__pic">
-                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
+                                    <img src="img/logo.svg" title="" alt="">
                                 </picture>
                             </a>
 
@@ -230,12 +230,20 @@
 
     <!-- CONTENT -->
     <main class="content">
+        <section class="section section-404">
+            <div class="page-404 text-center">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-404"></use>
+                </svg>
 
+                <p>Сторінка не знайдена</p>
+            </div>
+        </section>
     </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" hidden>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -243,7 +251,7 @@
                         <div class="footer-content__column">
                             <a href="/" class="logo">
                                 <picture class="logo__pic">
-                                    <img src="<%= require('./img/logo.svg') %>" title="" alt="">
+                                    <img src="img/logo.svg" title="" alt="">
                                 </picture>
                             </a>
 
@@ -347,8 +355,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-</body>
+<script type="text/javascript" src="bundle.9d7be9931c1bf1d39792.min.js"></script></body>
 </html>

@@ -727,7 +727,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   align-content: center;
   width: 100%;
@@ -752,7 +752,7 @@
     svg {
       width: 17px;
       height: 17px;
-      margin: 0 0 0 30px;
+      margin: 0 0 0 5px;
       vertical-align: middle;
       transition: $transition-base;
     }
@@ -760,14 +760,36 @@
 
   &__select {
     &-wrap {
-      margin: 0 0 0 30px;
+      margin: 20px 0 0;
     }
   }
 }
 
+.catalog-sidebar-toggle {
+  position: absolute;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  margin: 0;
+  background: none;
+}
+
 .catalog-sidebar {
-  width: 25%;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
   max-width: 320px;
+  border-top: 1px solid #f0f0f0;
+  background: white;
+  transition: $transition-base;
+  z-index: 1;
+
+  &.active {
+    right: 0;
+  }
 
   &__title {
     padding: 10px 20px;
@@ -925,19 +947,21 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  width: 75%;
+  width: 100%;
 
   &__card {
-    flex: 0 1 33.333%;
+    flex: 0 1 100%;
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    width: 33.333%;
+    width: 100%;
     padding: 30px;
-    border-bottom: 1px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-top: 0;
+    background: white;
 
     &:hover {
       img {
@@ -956,7 +980,8 @@
 
       img {
         width: 100%;
-        height: 100%;
+        height: 272px;
+        margin: 0 auto;
         object-fit: cover;
         transition: $transition-base;
       }
@@ -1005,8 +1030,8 @@
   border-bottom: none;
 
   &-view {
-    flex: 1 1 50%;
-    width: 50%;
+    flex: 1 1 100%;
+    width: 100%;
     border-right: 1px solid #f0f0f0;
 
     &__pic {
@@ -1016,8 +1041,11 @@
       background: white;
 
       img {
+        display: block;
         width: 100%;
+        max-width: 580px;
         height: 413px;
+        margin: 0 auto;
         object-fit: cover;
         object-position: center;
       }
@@ -1063,11 +1091,11 @@
   }
 
   &-details {
-    flex: 1 1 50%;
-    width: 50%;
+    flex: 1 1 100%;
+    width: 100%;
 
     &__characteristic {
-      padding: 30px;
+      padding: 15px;
       border-bottom: 1px solid #f0f0f0;
       background: white;
 
@@ -1111,15 +1139,15 @@
       border-bottom: 1px solid #f0f0f0;
 
       &-box {
-        flex: 1 1 50%;
+        flex: 1 1 100%;
         display: inline-flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         align-content: center;
-        width: 50%;
-        padding: 60px 50px;
+        width: 100%;
+        padding: 30px 50px;
       }
 
       &-total {
@@ -1133,7 +1161,7 @@
     }
 
     &__description {
-      padding: 30px;
+      padding: 15px;
       border-bottom: 1px solid #f0f0f0;
       background: white;
 
@@ -1173,26 +1201,26 @@
           margin: 0 0 20px;
         }
       }
-    }
 
-    &__description-service {
-      padding: 30px;
-      border-bottom: 1px solid #f0f0f0;
-      background: white;
+      &-service {
+        padding: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        background: white;
 
-      h2, h3 {
-        margin: 0 0 10px;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 32px;
-      }
+        h2, h3 {
+          margin: 0 0 10px;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+        }
 
-      p {
-        margin: 0;
-        line-height: 31px;
+        p {
+          margin: 0;
+          line-height: 31px;
 
-        &:not(:last-child) {
-          margin: 0 0 20px;
+          &:not(:last-child) {
+            margin: 0 0 20px;
+          }
         }
       }
     }
@@ -1222,8 +1250,8 @@
   border: 1px solid #f0f0f0;
 
   .catalog__card {
-    flex: 0 1 25%;
-    width: 25%;
+    flex: 0 1 100%;
+    width: 100%;
     border: none;
   }
 }
@@ -1573,7 +1601,7 @@
   &__box {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
@@ -1600,7 +1628,7 @@
     }
 
     &-name {
-      flex: 0 1 50%;
+      flex: 0 1 55%;
       font-size: 24px;
       font-weight: 700;
       line-height: 32px;
@@ -1637,7 +1665,7 @@
     width: 100%;
     padding: 30px;
     border: 1px solid #f0f0f0;
-    margin: 0;
+    margin: 0 0 30px;
     background: white;
 
     &-item {
@@ -1766,9 +1794,13 @@
   }
 
   &__box {
-    width: 25%;
+    width: 100%;
+    //max-width: 320px;
     padding: 30px 30px 45px;
-    border-bottom: 1px solid #f0f0f0;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #f0f0f0;
+    background: white;
 
     &:last-child {
       .build-way__box-head {
@@ -1829,8 +1861,6 @@
   &__title {
     margin: 0 0 60px;
   }
-
-
 }
 
 .build-types {
@@ -1850,9 +1880,12 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 25%;
+    width: 100%;
+    //max-width: 25%;
     padding: 30px 30px 45px;
-    border-bottom: 1px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-top: 0;
+    background: white;
 
     &-ico {
       display: inline-flex;
@@ -1897,7 +1930,8 @@
 
     img {
       width: 100%;
-      min-height: 440px;
+      height: 440px;
+      object-fit: cover;
     }
   }
 

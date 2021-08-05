@@ -109,6 +109,11 @@ $(function () {
         $(this).next().toggleClass('active');
     });
 
+    $('.catalog-sidebar-toggle').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).next().toggleClass('active');
+    });
+
     /* button to top */
     let buttonToTop = $('#to_top');
     buttonToTop.on('click', function () {

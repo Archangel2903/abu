@@ -28,6 +28,23 @@
   }
 }
 
+#to_top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  margin: 0;
+  background: $primary;
+
+  svg {
+
+  }
+}
+
 .main-wrapper {
   display: -ms-flexbox;
   display: -webkit-flex;

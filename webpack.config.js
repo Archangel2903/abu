@@ -14,8 +14,8 @@ const pages = fs
 module.exports = {
     entry: {main: "./src/js/index.js"},
     output: {
-        path: path.resolve(__dirname, "dist/js"),
-        filename: "bundle.[hash].min.js"
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.[hash].min.js",
     },
     module: {
         rules: [
@@ -24,7 +24,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    // outputPath: 'js',
                 }
             },
             {
