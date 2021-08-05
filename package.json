@@ -35,10 +35,12 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "imagesloaded": "^4.1.4",
     "intersection-observer": "^0.7.0",
     "jquery": "^3.5.1",
     "leaflet": "^1.7.1",
-    "lightgallery": "^1.8.2",
+    "lightgallery.js": "^1.4.0",
+    "masonry-layout": "^4.2.2",
     "popper.js": "^1.16.1",
     "select2": "^4.1.0-rc.0",
     "svg-spritemap-webpack-plugin": "^3.5.9",

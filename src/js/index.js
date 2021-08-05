@@ -5,9 +5,11 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
-// import 'lightgallery';
-import L from 'leaflet';
-import '../img/map-point.svg';
+import 'lightgallery.js';
+import Masonry from 'masonry-layout';
+import 'imagesloaded';
+// import L from 'leaflet';
+// import '../img/map-point.svg';
 
 function fixedSize() {
     let header = $('header.header'),
@@ -21,24 +23,13 @@ function fixedSize() {
     if (header.hasClass('scrolling')) {
         headerTop.css('margin-top', '-' + headerTopHeight + 'px');
         content.css('padding-top', headerContentHeight + 'px');
-    }
-    else {
+    } else {
         headerTop.css('margin-top', '0');
         setTimeout(function () {
             headerHeight = header.height();
             content.css('padding-top', headerHeight + 'px');
         }, 300);
     }
-}
-function toTop() {
-    let buttonToTop = $('#to_top');
-    buttonToTop.on('click', function () {
-        $('html, body').stop().animate({
-            scrollTop: 0,
-        }, 750);
-
-        return false;
-    });
 }
 
 $(window).on('load', function () {
@@ -77,6 +68,19 @@ $(window).on('load', function () {
     }*/
 
     fixedSize();
+
+    /* masonry init */
+    let grid = $('.grid');
+    if (grid.length) {
+        let gridBox = new Masonry('.grid', {
+            // percentPosition: true,
+            // fitWidth: true,
+            itemSelector: '.grid-item',
+            columnWidth: 180,
+            gutter: 0,
+            horizontalOrder: true,
+        });
+    }
 });
 
 $(function () {
@@ -85,8 +89,6 @@ $(function () {
 
         let header = $('header.header');
         let offsetTop = header.offset().top;
-
-        toTop();
 
         if (offsetTop > 0) {
             header.addClass('scrolling');
@@ -102,10 +104,19 @@ $(function () {
             $(e).addClass('dropdown-wrap');
         }
     });
-
     $('.header-content__menu-switch').on('click', function () {
         $(this).toggleClass('active');
         $(this).next().toggleClass('active');
+    });
+
+    /* button to top */
+    let buttonToTop = $('#to_top');
+    buttonToTop.on('click', function () {
+        $('html, body').stop().animate({
+            scrollTop: 0,
+        }, 750);
+
+        return false;
     });
 
     // Swiper sliders
@@ -135,7 +146,6 @@ $(function () {
             });
         }
     }
-
     if (projects_slider.length) {
         let slider,
             slide = document.querySelectorAll('.projects__slider .swiper-slide').length;
@@ -164,7 +174,6 @@ $(function () {
             });
         }
     }
-
     if (partners_slider.length) {
         let slider;
 
@@ -192,7 +201,6 @@ $(function () {
             }
         });
     }
-
     if (reviews_slider.length) {
         let slider,
             slide = document.querySelectorAll('.reviews__slider .swiper-slide').length;
@@ -218,7 +226,6 @@ $(function () {
             });
         }
     }
-
     if (card_slider.length) {
         let slider,
             sliderThumb;
@@ -242,7 +249,6 @@ $(function () {
             }
         });
     }
-
     if (gratitude_slider.length) {
         let slider,
             slide = document.querySelectorAll('.gratitude__slider .swiper-slide').length;
@@ -307,8 +313,7 @@ $(function () {
             if ($(this).hasClass('rotate')) {
                 $(this).toggleClass('rotate');
                 $(this).next('.catalog-sidebar__dropdown').stop().slideToggle(300);
-            }
-            else {
+            } else {
                 $('.catalog-sidebar__dropdown-trigger').removeClass('rotate');
                 $('.catalog-sidebar__dropdown').stop().slideUp(300);
                 $(this).toggleClass('rotate');
@@ -327,7 +332,6 @@ $(function () {
 
     // FAQ box
     let faqBox = $('.faq-box');
-
     if (faqBox.length) {
         let boxTrigger = $('.faq-box__trigger');
 
@@ -338,14 +342,23 @@ $(function () {
             if (thisBox.hasClass('active')) {
                 thisBox.toggleClass('active');
                 boxBody.stop().slideToggle(300);
-            }
-            else {
+            } else {
                 faqBox.removeClass('active');
                 faqBox.find('.faq-box__body').stop().slideUp(300);
                 thisBox.addClass('active');
                 boxBody.stop().slideDown(300);
             }
         });
+    }
+
+    /* lightgallery */
+    let galleryWrap = $('#lightgallery');
+    if (galleryWrap.length) {
+        lightGallery(document.getElementById('lightgallery'), {
+            download: false,
+        });
+
+
     }
 
     // Lazy load observer

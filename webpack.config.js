@@ -14,7 +14,7 @@ const pages = fs
 module.exports = {
     entry: {main: "./src/js/index.js"},
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist/js"),
         filename: "bundle.[hash].min.js"
     },
     module: {
@@ -78,7 +78,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'style.[hash].min.css',
-            outputPath: 'css',
+            outputPath: 'dist/css',
             chunkFilename: '[id].[hash].css',
         }),
         new OptimizeCSSAssetsPlugin({
@@ -89,11 +89,11 @@ module.exports = {
             },
             canPrint: true,
         }),
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
             template: 'src/index.html',
             filename: 'index.html',
             favicon: './src/favicon.ico',
-        }),
+        }),*/
         ...pages.map((page) => new HtmlWebpackPlugin({
             template: './src/' + page,
             filename: page,

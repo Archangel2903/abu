@@ -3,26 +3,12 @@
 
 /* Bootstrap */
 @import "~bootstrap/scss/bootstrap";
-////require
-//@import "~bootstrap/scss/functions";
-//@import "~bootstrap/scss/variables";
-//@import "~bootstrap/scss/mixins";
-//optional
-//@import "~bootstrap/scss/reboot";
-//@import "~bootstrap/scss/grid";
-//@import "~bootstrap/scss/type";
-//@import "~bootstrap/scss/utilities";
-//@import "~bootstrap/scss/buttons";
-//@import "~bootstrap/scss/card";
-//@import "~bootstrap/scss/forms";
-//@import "~bootstrap/scss/modal";
-//@import "~bootstrap/scss/utilities/text";
 
 //plugins
 @import "~swiper/dist/css/swiper.min.css";
 @import "~select2/src/scss/core";
 @import "~leaflet/dist/leaflet.css";
-@import "~lightgallery/dist/css/lightgallery.min.css";
+@import "~lightgallery.js/dist/css/lightgallery.min.css";
 
 /* Project style */
 //partials

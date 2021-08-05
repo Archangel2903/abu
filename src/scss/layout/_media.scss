@@ -72,6 +72,15 @@
       background: none;
     }
   }
+
+  .blog {
+    &__card {
+      flex: 1 1 50%;
+      max-width: 50%;
+      border: none !important;
+      background: none;
+    }
+  }
 }
 @include media-breakpoint-up(md) {
   .background-lines {
@@ -163,6 +172,30 @@
       border: none;
       border-bottom: 1px solid #f0f0f0;
       margin: 0 !important;
+    }
+  }
+
+  .blog {
+    &__card {
+      flex: 1 1 33.333%;
+      max-width: 33.333%;
+
+      &-title {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .page-404 {
+    margin: 150px auto 0;
+
+    svg {
+      width: 535px;
+      height: 225px;
+    }
+
+    p {
+      margin: 60px 0 0;
     }
   }
 
@@ -272,6 +305,12 @@
     }
     &-head {
       height: 689px;
+
+      &_sm {
+        .head-content__title {
+          line-height: 74px;
+        }
+      }
     }
     &-service-in-numbers {
       padding: 190px 0;
@@ -302,7 +341,6 @@
     }
     &-faq {
       padding: 190px 0;
-      background: $section-bg;
     }
     &-video {
       padding: 190px 0;
@@ -376,6 +414,36 @@
     &__card {
       flex: 0 1 25%;
       padding: 30px;
+    }
+  }
+
+  .blog {
+    &__card {
+      flex: 1 1 25%;
+      max-width: 25%;
+    }
+  }
+
+  .build-benefits {
+    &__box {
+      padding: 30px;
+
+      &-number {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+        margin-right: 30px;
+      }
+
+      &-name {
+        flex: 1 1 70%;
+      }
+    }
+  }
+
+  .faq {
+    &__title {
+      margin: 0;
     }
   }
 
@@ -461,6 +529,17 @@
         display: block;
         width: 560px;
         height: 600px;
+      }
+    }
+  }
+
+  .blog {
+    &__card {
+      flex: 1 1 25%;
+      max-width: 25%;
+
+      &-title {
+        font-size: 24px;
       }
     }
   }
@@ -582,12 +661,12 @@
   }
 
   .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
+    //display: flex;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
+    //align-items: stretch;
+    //align-content: stretch;
 
     &__box {
       flex: 1 1 33.333%;
@@ -606,7 +685,7 @@
       max-width: 180px;
       height: 100%;
       max-height: 240px;
-      margin: 0 0 40px;
+      //margin: 0 0 40px;
 
       img {
         width: 100%;
@@ -619,16 +698,21 @@
         max-width: 400px;
         height: 520px;
         max-height: 520px;
-        margin: 0;
+        //margin: 0;
       }
 
       &_horizontal {
         width: 100%;
         max-width: 400px;
         height: 100%;
-        max-height: 240px;
+        //max-height: 240px;
       }
     }
+  }
+
+  .page-404 {
+    margin: 220px auto 0;
+    border-left: 0;
   }
 }
 
