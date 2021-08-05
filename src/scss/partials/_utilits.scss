@@ -512,3 +512,11 @@ input[type="checkbox"]:checked + .checkbox-wrap > .checkbox {
     }
   }
 }
+
+.modal {
+  &-content {
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+}

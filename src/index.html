@@ -243,7 +243,7 @@
                     <h1 class="home-content__title">Альянс Будівельників України</h1>
 
                     <div class="home-content__bottom row">
-                        <div class="col-12 col-sm-auto">
+                        <div class="col-12 col-sm-auto" data-toggle="modal" data-target="#modal_form">
                             <button class="btn btn-lg btn-primary">Зв'язок</button>
                         </div>
                         <div class="col-12 col-sm-auto">
@@ -272,7 +272,7 @@
                         <p class="about-company__text">У наших клієнтів немає необхідності звертатися за додатковими послугами до інших підрядників, оскільки ми
                             використовуємо обладнання та витратні матеріали провідних світових брендів.</p>
 
-                        <button class="about-company__video-btn">
+                        <button class="about-company__video-btn" data-toggle="modal" data-target="#modal_video">
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-play"></use>
                             </svg>
@@ -361,7 +361,7 @@
                     </div>
 
                     <div class="col-lg-3 align-self-center text-lg-right">
-                        <button class="btn btn-lg btn-primary">Зв'язатися з менеджером</button>
+                        <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal_form">Зв'язатися з менеджером</button>
                     </div>
 
                     <div class="col-12 mt-5 mt-lg-0">
@@ -930,6 +930,62 @@
         <span class="background-lines__line"></span>
         <span class="background-lines__line"></span>
         <span class="background-lines__line"></span>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="mailto:test@test.test" method="post" class="request__form w-100">
+                <div class="form-group">
+                    <label class="col p-0 m-0">
+                        <span class="request__input-name">Iм'я</span>
+                        <input type="text" class="request__input form-control" placeholder="Введіть ваше ім'я">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col p-0 m-0">
+                        <span class="request__input-name">Телефон</span>
+                        <input type="tel" class="request__input form-control" placeholder="Ваш номер телефона">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col p-0 m-0">
+                        <span class="request__input-name">Email</span>
+                        <input type="email" class="request__input form-control" placeholder="Ваша електронна пошта">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col p-0 m-0">
+                        <span class="request__input-name">Тема</span>
+                        <input type="text" class="request__input form-control" placeholder="Тема заявки">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col p-0 m-0">
+                        <input type="checkbox" class="request__input request__input_check">
+                        <span class="checkbox-wrap">
+                                    <span class="checkbox"></span>
+                                    <span class="checkbox-text">Я не робот</span>
+                                </span>
+                    </label>
+                </div>
+
+                <input type="submit" value="Замовити дзвінок" class="btn btn-lg btn-primary btn-block">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <iframe width="100%" height="620" src="https://www.youtube.com/embed/9YRmddw5yFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 </div>
 
