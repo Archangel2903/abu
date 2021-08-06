@@ -70,23 +70,32 @@ $(window).on('load', function () {
     fixedSize();
 
     /* masonry init */
-    let grid = $('.grid');
+    /*let grid = $('.grid');
     if (grid.length) {
         let gridBox = new Masonry('.grid', {
             // percentPosition: true,
             // fitWidth: true,
-            itemSelector: '.grid-item',
+            itemSelector: grid.find('.grid-item'),
             columnWidth: 180,
-            gutter: 0,
+            gutter: 40,
             horizontalOrder: true,
         });
-    }
+    }*/
 });
 
 $(function () {
+    /* button to top */
+    let buttonToTop = $('#to_top');
+    buttonToTop.on('click', function () {
+        $('html, body').stop().animate({
+            scrollTop: 0,
+        }, 750);
+
+        return false;
+    });
+
     $(window).on('resize', fixedSize);
     $(window).on('scroll', function (e) {
-
         let header = $('header.header');
         let offsetTop = header.offset().top;
 
@@ -96,6 +105,13 @@ $(function () {
         } else {
             header.removeClass('scrolling');
             fixedSize();
+        }
+
+        if (offsetTop > 300) {
+            buttonToTop.addClass('show');
+        }
+        else {
+            buttonToTop.removeClass('show');
         }
     });
 
@@ -112,16 +128,6 @@ $(function () {
     $('.catalog-sidebar-toggle').on('click', function () {
         $(this).toggleClass('active');
         $(this).next().toggleClass('active');
-    });
-
-    /* button to top */
-    let buttonToTop = $('#to_top');
-    buttonToTop.on('click', function () {
-        $('html, body').stop().animate({
-            scrollTop: 0,
-        }, 750);
-
-        return false;
     });
 
     // Swiper sliders
@@ -361,9 +367,8 @@ $(function () {
     if (galleryWrap.length) {
         lightGallery(document.getElementById('lightgallery'), {
             download: false,
+            selector: '.grid-item',
         });
-
-
     }
 
     // Lazy load observer

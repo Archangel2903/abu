@@ -379,85 +379,41 @@
 
         <section class="section section-gallery">
             <div class="container">
-                <div id="lightgallery" class="gallery grid">
-                    <a href="<%= require('./img/gallery01.jpg') %>" class="grid-item grid-item_lg">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery01.jpg') %>" alt="" title="">
-                    </a>
+                <div id="lightgallery" class="gallery">
+                    <div class="gallery__box grid">
+                        <a href="<%= require('./img/gallery01.jpg') %>" class="grid-item grid-item_lg">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery01.jpg') %>" alt="" title="">
+                        </a>
+                    </div>
 
-                    <a href="<%= require('./img/gallery02.jpg') %>" class="grid-item">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery02.jpg') %>" alt="" title="">
-                    </a>
+                    <div class="gallery__box grid">
+                        <a href="<%= require('./img/gallery02.jpg') %>" class="grid-item">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery02.jpg') %>" alt="" title="">
+                        </a>
 
-                    <a href="<%= require('./img/gallery06.jpg') %>" class="grid-item">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery06.jpg') %>" alt="" title="">
-                    </a>
+                        <a href="<%= require('./img/gallery06.jpg') %>" class="grid-item">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery06.jpg') %>" alt="" title="">
+                        </a>
 
-                    <a href="<%= require('./img/gallery05.jpg') %>" class="grid-item grid-item_md">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery05.jpg') %>" alt="" title="">
-                    </a>
+                        <a href="<%= require('./img/gallery05.jpg') %>" class="grid-item grid-item_md">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery05.jpg') %>" alt="" title="">
+                        </a>
+                    </div>
 
-                    <a href="<%= require('./img/gallery03.jpg') %>" class="grid-item">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery03.jpg') %>" alt="" title="">
-                    </a>
+                    <div class="gallery__box grid">
+                        <a href="<%= require('./img/gallery04.jpg') %>" class="grid-item grid-item_md">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery04.jpg') %>" alt="" title="">
+                        </a>
 
-                    <a href="<%= require('./img/gallery07.jpg') %>" class="grid-item">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery07.jpg') %>" alt="" title="">
-                    </a>
+                        <a href="<%= require('./img/gallery03.jpg') %>" class="grid-item">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery03.jpg') %>" alt="" title="">
+                        </a>
 
-                    <a href="<%= require('./img/gallery04.jpg') %>" class="grid-item grid-item_md">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery04.jpg') %>" alt="" title="">
-                    </a>
+                        <a href="<%= require('./img/gallery07.jpg') %>" class="grid-item">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery07.jpg') %>" alt="" title="">
+                        </a>
+                    </div>
                 </div>
-
-                <!--<div id="lightgallery" class="gallery">
-                    <div class="gallery__box">
-                        <a href="<%= require('./img/gallery01.jpg') %>">
-                            <picture class="gallery__pic gallery__pic_vertical">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery01.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-                    </div>
-
-                    <div class="gallery__box">
-                        <a href="<%= require('./img/gallery02.jpg') %>">
-                            <picture class="gallery__pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery02.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-
-                        <a href="<%= require('./img/gallery03.jpg') %>">
-                            <picture class="gallery__pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery03.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-
-                        <a href="<%= require('./img/gallery04.jpg') %>">
-                            <picture class="gallery__pic gallery__pic_horizontal">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery04.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-                    </div>
-
-                    <div class="gallery__box">
-                        <a href="<%= require('./img/gallery05.jpg') %>">
-                            <picture class="gallery__pic gallery__pic_horizontal">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery05.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-
-                        <a href="<%= require('./img/gallery06.jpg') %>">
-                            <picture class="gallery__pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery06.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-
-                        <a href="<%= require('./img/gallery07.jpg') %>">
-                            <picture class="gallery__pic">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/gallery07.jpg') %>" alt="" title="">
-                            </picture>
-                        </a>
-                    </div>
-                </div>-->
             </div>
         </section>
 
@@ -650,7 +606,9 @@
     </div>
 </div>
 
-<button id="to_top"></button>
+<button id="to_top">
+    <svg><use xlink:href="img/spritemap.svg#sprite-dropdown"></use></svg>
+</button>
 <div class="icon-load">
     <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>

@@ -30,7 +30,7 @@
 
   .home-content {
     &__title {
-      font-size: 60px;
+      font-size: 50px;
     }
 
     &__bottom {
@@ -85,33 +85,64 @@
     &__card {
       flex: 0 1 50%;
       width: 50%;
+      padding: 30px;
       border: 0;
       border-bottom: 1px solid #f0f0f0;
       background: none;
     }
   }
 
-  .product-card-details {
-    &__price-tag-box {
-      flex: 1 1 50%;
-      width: 50%;
-      padding: 60px 50px;
-    }
-
-    &__description {
-      padding: 30px;
-
-      &-service {
+  .product-card {
+    &-view {
+      &__pic {
         padding: 30px;
+
+        img {
+          height: 413px;
+        }
+      }
+
+      &__slider {
+        .swiper-slide {
+          padding: 30px;
+
+          picture {
+            img {
+              height: 413px;
+            }
+          }
+        }
+      }
+    }
+    &-details {
+      &__price-tag-box {
+        flex: 1 1 50%;
+        width: 50%;
+        padding: 60px 50px;
+      }
+
+      &__description {
+        padding: 30px;
+
+        &-name {
+          font-size: 54px;
+        }
+
+        &-service {
+          padding: 30px;
+        }
       }
     }
   }
 
   .other-products {
+    border-bottom: none;
+
     .catalog__card {
       flex: 0 1 50%;
       width: 50%;
       border: none;
+      border-bottom: 1px solid #f0f0f0;
     }
   }
 
@@ -129,6 +160,28 @@
       width: 50%;
       border-width: 0 0 1px;
       background: none;
+    }
+  }
+
+  .article-content {
+    &__col {
+      padding: 30px;
+    }
+
+    &__pic {
+      img {
+        height: 360px;
+      }
+    }
+  }
+
+  .object-info {
+    &__pic {
+      padding: 30px;
+
+      img {
+        height: 440px;
+      }
     }
   }
 }
@@ -150,6 +203,12 @@
       &::before {
         margin-right: 20px;
       }
+    }
+  }
+
+  .breadcrumb {
+    &-item {
+      display: block;
     }
   }
 
@@ -175,7 +234,7 @@
 
   .home-content {
     &__title {
-      font-size: 81px;
+      font-size: 60px;
     }
   }
 
@@ -226,6 +285,8 @@
   }
 
   .catalog-sort {
+    justify-content: flex-end;
+
     &__select {
       &-wrap {
         margin: 0 0 0 30px;
@@ -244,7 +305,6 @@
     .catalog__card {
       flex: 0 1 33.333333%;
       width: 33.333333%;
-      border: none;
     }
   }
 
@@ -454,6 +514,7 @@
     padding: 200px 0 325px;
 
     &__title {
+      font-size: 81px;
       line-height: 110px;
     }
   }
@@ -530,6 +591,9 @@
       flex: 1 1 50%;
       width: 50%;
 
+      &__description {
+        border-top: 0;
+      }
       &__characteristic {
         padding: 30px;
       }
@@ -540,7 +604,6 @@
     .catalog__card {
       flex: 0 1 25%;
       width: 25%;
-      border: none;
     }
   }
 
