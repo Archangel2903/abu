@@ -1479,7 +1479,7 @@
   align-content: stretch;
 
   &__box {
-    flex: 1 1 33.333%;
+    flex: 1 1 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1487,6 +1487,7 @@
     align-items: flex-start;
     align-content: flex-start;
     max-width: 400px;
+    margin: 0 auto;
   }
 
   &__pic {
@@ -1520,12 +1521,9 @@
   }
 
   .grid {
-    height: 520px;
-
     &-item {
       display: inline-block;
       width: 100%;
-      max-width: 180px;
       height: 240px;
       margin-bottom: 40px;
 
@@ -1534,53 +1532,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-      }
-
-      &_md {
-        width: 100%;
-        max-width: 400px;
-      }
-
-      &_lg {
-        width: 100%;
-        max-width: 400px;
-        height: 520px;
-
-        img {}
       }
     }
   }
-
-  /*.grid {
-    height: 520px;
-
-    &-item {
-      display: inline-block;
-      width: 33%;
-      max-width: 180px;
-      height: 240px;
-      margin-bottom: 40px;
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      &_md {
-        max-width: 400px;
-      }
-
-      &_lg {
-        max-width: 400px;
-        height: 520px;
-        margin-bottom: 0;
-
-        img {}
-      }
-    }
-  }*/
 }
 
 /* SECTION ACHIEVEMENTS */

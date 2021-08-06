@@ -6,8 +6,8 @@ import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
 import 'lightgallery.js';
-import Masonry from 'masonry-layout';
-import 'imagesloaded';
+// import Masonry from 'masonry-layout';
+// import 'imagesloaded';
 // import L from 'leaflet';
 // import '../img/map-point.svg';
 
