@@ -16,6 +16,18 @@
     font-size: 54px;
   }
 
+  .pagination {
+    .page-item {
+      &:first-child {
+        margin-right: 50px;
+      }
+
+      &:last-child {
+        margin-left: 50px;
+      }
+    }
+  }
+
   .section-head {
     &.section-head_sm {
       .head-content {
@@ -600,6 +612,7 @@
   .catalog-sidebar {
     position: static;
     width: 25%;
+    max-width: 320px;
     border: none;
     background: none;
   }

@@ -720,6 +720,7 @@
 
 /* SECTION CATALOG */
 .catalog-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -791,11 +792,11 @@
 
 .catalog-sidebar {
   position: absolute;
-  top: 63px;
-  right: 100%;
+  top: 62px;
+  right: 200%;
   width: 100%;
-  max-width: 320px;
-  border-top: 1px solid #f0f0f0;
+  border: 1px solid #f0f0f0;
+  border-bottom: 0;
   background: white;
   transition: $transition-base;
   z-index: 1;
