@@ -187,6 +187,7 @@
 /* SECTION HOME */
 .home-content {
   padding: 50px 0;
+  color: white;
 
   &__text {
     margin: 0 0 10px;
@@ -1273,7 +1274,7 @@
 
 /* SECTION HEAD */
 .head-content {
-  //padding: 150px 0;
+  color: white;
 
   &__name {
     @extend .home-content__text;

@@ -530,6 +530,19 @@ input[type="checkbox"]:checked + .checkbox-wrap > .checkbox {
 }
 
 .modal {
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    border: none;
+    margin: 0;
+    overflow: visible;
+    color: #888888;
+    font-size: 40px;
+    z-index: 1;
+  }
+
   &-content {
     background: none;
     box-shadow: none;
