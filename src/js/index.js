@@ -4,8 +4,8 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
-import 'select2';
 import 'lightgallery.js';
+// import 'select2';
 // import Masonry from 'masonry-layout';
 // import 'imagesloaded';
 // import L from 'leaflet';
@@ -68,19 +68,6 @@ $(window).on('load', function () {
     }*/
 
     fixedSize();
-
-    /* masonry init */
-    /*let grid = $('.grid');
-    if (grid.length) {
-        let gridBox = new Masonry('.grid', {
-            // percentPosition: true,
-            // fitWidth: true,
-            itemSelector: grid.find('.grid-item'),
-            columnWidth: 180,
-            gutter: 40,
-            horizontalOrder: true,
-        });
-    }*/
 });
 
 $(function () {
@@ -334,12 +321,12 @@ $(function () {
     }
 
     // select2
-    if ($('.select-style').length) {
+    /*if ($('.select-style').length) {
         $('.select-style').select2({
             dropdownParent: $('.dropdown-wrapper'),
             minimumResultsForSearch: -1,
         });
-    }
+    }*/
 
     // FAQ box
     let faqBox = $('.faq-box');
