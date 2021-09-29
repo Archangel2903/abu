@@ -13,14 +13,16 @@ import 'lightgallery.js';
 
 function fixedSize() {
     let header = $('header.header'),
-        headerHeight = header.height(),
-        headerTop = header.find('.header-top-wrap'),
-        headerTopHeight = headerTop.height(),
-        headerContent = header.find('.header-content-wrap'),
-        headerContentHeight = headerContent.height(),
-        content = $('main.content');
+        content = $('main.content'),
+        headerHeight = header.height();
+        // headerTop = header.find('.header-top-wrap'),
+        // headerTopHeight = headerTop.height(),
+        // headerContent = header.find('.header-content-wrap'),
+        // headerContentHeight = headerContent.height();
 
-    if (header.hasClass('scrolling')) {
+        content.css('padding-top', headerHeight + 'px');
+
+    /*if (header.hasClass('scrolling')) {
         headerTop.css('margin-top', '-' + headerTopHeight + 'px');
         content.css('padding-top', headerContentHeight + 'px');
     } else {
@@ -29,7 +31,7 @@ function fixedSize() {
             headerHeight = header.height();
             content.css('padding-top', headerHeight + 'px');
         }, 300);
-    }
+    }*/
 }
 
 $(window).on('load', function () {
@@ -71,6 +73,8 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    fixedSize();
+
     /* button to top */
     let buttonToTop = $('#to_top');
     buttonToTop.on('click', function () {
@@ -87,10 +91,10 @@ $(function () {
         let offsetTop = header.offset().top;
 
         if (offsetTop > 0) {
-            header.addClass('scrolling');
+            // header.addClass('scrolling');
             fixedSize();
         } else {
-            header.removeClass('scrolling');
+            // header.removeClass('scrolling');
             fixedSize();
         }
 
