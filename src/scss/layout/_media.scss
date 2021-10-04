@@ -94,6 +94,17 @@
   }
 
   .catalog {
+    &__banner {
+      padding: 30px;
+
+      &-pic {
+        height: auto;
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
     &__card {
       flex: 0 1 50%;
       width: 50%;
@@ -307,6 +318,12 @@
   }
 
   .catalog {
+    &__banner {
+      &-text {
+        font-size: 54px;
+        line-height: 74px;
+      }
+    }
     &__card {
       flex: 0 1 33.333333%;
       width: 33.333333%;
@@ -770,6 +787,16 @@
         display: block;
         width: 560px;
         height: 600px;
+      }
+    }
+  }
+
+  .catalog {
+    &__banner {
+      &-text {
+        left: 70px;
+        max-width: 300px;
+        transform: translate(0, -50%);
       }
     }
   }
