@@ -944,14 +944,16 @@
           &:hover {
             &> .header-content__menu-dropdown {
               left: 100%;
-              transform: rotate3d(0, 0, 0, 90deg);
+              opacity: 1;
+              visibility: visible;
+              transform: translate(0, -15%) rotate3d(0, 0, 0, 90deg);
             }
           }
 
           .header-content__menu-dropdown {
             top: auto;
             left: auto;
-            transform: rotate3d(1, 0, 0, 90deg);
+            transform: translate(0, -15%) rotate3d(1, 0, 0, 90deg);
           }
         }
 
