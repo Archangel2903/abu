@@ -890,7 +890,7 @@
         }
 
         &:hover {
-          .header-content__menu {
+          &> .header-content__menu {
             &-link {
               &::after {
                 transform: rotate3d(1, 0, 0, 180deg);
@@ -939,6 +939,19 @@
         &-item {
           &:not(:last-child) {
             margin-bottom: 20px;
+          }
+
+          &:hover {
+            &> .header-content__menu-dropdown {
+              left: 100%;
+              transform: rotate3d(0, 0, 0, 90deg);
+            }
+          }
+
+          .header-content__menu-dropdown {
+            top: auto;
+            left: auto;
+            transform: rotate3d(1, 0, 0, 90deg);
           }
         }
 
